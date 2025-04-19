@@ -1,0 +1,1546 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+
+	<meta name="facebook-domain-verification" content="wr1m9kygeeh8e6ru9oqocjdvo236n8" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+	<script>window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-JF94J1W5MC');</script>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-55TW6ML');</script>
+	<!-- End Google Tag Manager -->
+
+
+	<title>Generative AI Guide - Dataknobs</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Generative AI guide - start with overview, opportunities, challenges. Describe Foundation model, Domain Specific Model.  It further  describe LLM, prompt engineering, prompt templates, finetuning.  Describe best practices for GenAI implementation.  Also describe how GenAI is used across industries. " />
+	<meta name="keywords" content="Generative AI guide - start with overview, opportunities, challenges. Describe Foundation model, Domain Specific Model.  It further  describe LLM, prompt engineering, prompt templates, finetuning.  Describe best practices for GenAI implementation.  Also describe how GenAI is used across industries." />
+	<link rel="icon" href="https://storage.googleapis.com/json_articles/dataknobs-logo-2.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+	<script src="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/js/jquery-1.8.3.min.js"></script>
+	<script src="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+	<script src="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/js/jquery.dropotron-1.2.js"></script>
+	<script src="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/5grid/core.css" />
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/5grid/core-desktop.css" />
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/5grid/core-1200px.css" />
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/5grid/core-noscript.css" />
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/style.css" />
+		<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/sites/site-6/site6/css/style-desktop.css" />
+	</noscript>
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z92L4SV451"></script>
+	<script>window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-Z92L4SV451');</script>
+
+
+</head>
+
+	<body class="no-sidebar">
+
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55TW6ML"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="5grid-layout">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<header id="header">
+									<div class="inner">
+									
+										<!-- Logo -->
+											<h1><a href="https://www.dataknobs.com/" class="mobileUI-site-name">Dataknobs</a></h1>
+										
+										<!-- Nav -->
+											<nav id="nav" class="mobileUI-site-nav">
+												<ul>
+													
+													<li><a href="https://www.dataknobs.com/products/">Products</a>
+														<ul>
+															<li><a href="https://www.dataknobs.com/products/kreatewebsites/">Kreate Websites</a></li>
+															<li><a href="https://www.dataknobs.com/products/kreatebots/">Kreate Bots</a></li>
+															<li><a href="https://www.dataknobs.com/products/abexperiment/">AB Experiment</a></li>
+															
+														</ul>
+													</li>
+													<li><a href="https://www.dataknobs.com/products/">Solutions</a>
+														<ul>
+															<li><a href="https://www.dataknobs.com/solutions/earnings-call/">Earnings Call</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/finance/">Finance Bots</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/asset-management/">Asset Management</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/predictive-maintenance/">Predictive Maintenance</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/anonymization/">Data Anonmymization</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/homemorphic-encryption/">Homomorphic Encryption</a></li>
+														</ul>
+													</li>
+													<li>
+														<a href="" class="arrow">Productized Services</a>
+														<ul>
+															<li><a href="https://www.dataknobs.com/products/abexperiment/chatbots">AB Testing of Chatbot</a></li>
+															<li><a href="https://www.dataknobs.com/products/abexperiment/websites">AB Testing of Websites</a></li>
+															<li><a href="https://www.dataknobs.com/products/kreatebots/customization/">Customized Chatbots</a></li>
+															<li><a href="https://www.dataknobs.com/solutions/asset-management/customizations/">Customized Asset Management</a></li>
+															<li><a href="https://www.dataknobs.com/products/kreatewebsites/customizations/">Big Websites</a></li>
+															
+
+															<li><a href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a></li>
+															<li><a href="https://www.dataknobs.com/generate-datasets/augment.html">Augment datasets</a></li>
+															<li><a href="#">Make datasets complaint</a></li>
+															<li><a href="https://www.dataknobs.com/datasets-blindspots/">AI Blind spot identification</a></li>
+															<li>
+																<span class="arrow">Fractional CDO</span>
+																<ul>
+																	<li><a href="https://www.dataknobs.com/data-products/">Build Data Products</a></li>
+																	<li><a href="https://www.dataknobs.com/products/kreatebots/presentation-videos/">LLM Strategy to Implementation</a></li>
+																	<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html/">Generative AI Strategy to Implementation</a></li>
+																	<li><a href="https://www.dataknobs.com/products/workshop/">Workshop</a></li>
+																	<li><a href="https://www.dataknobs.com/products/services/">Services</a></li>
+																	<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Build Data p</a></li>
+																	<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Generative AI 101 slides</a></li>
+																	<li><a href="https://www.dataknobs.com/generate-datasets/">Generative dataset</a></li>
+																	<li><a href="https://www.dataknobs.com/datasets-blindspots/">Find blind spots</a></li>
+																	<li><a href="#">Build knobs</a></li>
+																	
+
+
+																</ul>
+															</li>
+
+														</ul>
+													</li>
+													
+													<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Generative AI slides</a></li>
+													<li><a href="https://www.dataknobs.com/about-dataknobs/">About us</a></li>
+													<li><a href="https://www.dataknobs.com/search.html">Search</a></li>
+												</ul>
+											</nav>
+									
+									</div>
+								</header>
+
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Main Wrapper -->
+			<div id="main-wrapper">
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>Generative AI Guide</h2>
+										<span class="byline">Guide to mastering GenAI and implement with <strong>KREATE KONTROLS and LEVER</strong> for multiple use cases</span>
+									</header>
+								</div>
+							</div>
+							<div class="row">
+								<div class="4u">
+									<section>
+
+										<header class="second second-friends">
+											<h3>Creativity</h3>
+											<span class="byline">Produce innovative content. </span>
+										</header>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+
+										<header class="second second-gear">
+											<h3>Automation</h3>
+											<span class="byline">Automate repetitive tasks </span>
+										</header>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+
+										<header class="second second-chart">
+											<h3>Personalization</h3>
+											<span class="byline">Build Personal Assistants</span>
+										</header>
+									</section>
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<p>
+										The potential impact of generative AI is immense, with applications across various industries. Here are some key areas where this technology is poised to make a significant difference:
+										<br />Creative industries: Generative AI can provide artists, designers, and writers with powerful tools to expand their creative horizons and produce innovative work.
+										<br />Education: AI-powered personalized learning platforms can tailor educational materials to individual students' needs and learning styles, enhancing engagement and improving learning outcomes.
+										<br />Healthcare: AI can analyze medical images and data to aid in diagnosis and treatment planning, potentially leading to more accurate diagnoses and improved patient care.
+										<br />Science and research: Generative AI can accelerate scientific discovery by assisting researchers in identifying patterns, generating hypotheses, and designing experiments.
+										<br />Business and industry: AI can automate repetitive tasks, optimize workflows, and generate marketing materials, leading to increased efficiency and productivity.
+									</p>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Opportunites</h2>
+											<span class="byline">Create new content, Boost productivity</span>
+										</header>
+										<p>
+											GenAI can product innovative content, dataset that help in drug discovery. GenAI is ultimate productivity booster as it can automate task. GenAI cab build varity of personal assistant to help us in day to day job.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html" class="button button-medium button-alt button-icon button-icon-info">Know Benefits</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Challenges</h2>
+											<span class="byline">Lack of control, bias, hallunication.</span>
+										</header>
+										<p>
+											Despite its vast potential, the use of generative AI also raise important ethical concerns. The ouput can be biased, illegal and hard to explain. There is very little control on output.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/5-challenges/" class="button button-medium button-icon button-icon-rarrow">Learn Challenges</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>Easy to use, Hard To Build</h2>
+										<span class="byline">GenAI model can be used by natural language. Consumers find it easy to use. However It is very hard for companies to build GenAI models</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+
+				<div class="main-wrapper-style2">
+					<div class="inner">
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>Build Data Products using GenAI</h2>
+										<span class="byline"> <strong> Data Products </strong> build Right From Start</span>
+									</header>
+								</div>
+							</div>
+							<div class="row">
+								<div class="4u">
+									<section>
+										<a href="https://www.dataknobs.com/products/">
+											<span class="image image-full"><img src="https://storage.googleapis.com/5106_gdrive/www.dataknobs.com/input/content/products/kreate-kontrols-knobs/images/Slide700/Slide3.png" alt="Dataknobs GenAI capabilities" /></span>
+										</a>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+										<a href="https://www.dataknobs.com/products/kreate/">
+											<span class="image image-full"><img src="https://storage.googleapis.com/5106_gdrive/www.dataknobs.com/input/content/customer-slides/dataknobs-capabilities-enterprise/images/Slide700/Slide4.png" alt="GenAI - Powered Search" /></span>
+										</a>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+										<a href="https://kreate.dataknobs.com/" target="blank">
+											<span class="image image-full"><img src="https://storage.googleapis.com/5101_gdrive/site1.kreatewebsites.com/input/content/data-products/co-pilot-for-data-products/images/Slide1200/Slide1.png" alt="Co Pilot for Data Product Development" /></span>
+										</a>
+									</section>
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<p>
+										Dataknobs capablities - KREATE, KONTROLS and KNOBS.
+										<br />KREATE focus on creatibvity and generation
+										<br />KONTROLS provide guardrails, lineage, compliance, privacy and security.
+										<br />KNOBS enable experimentation and diagnosis
+									</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- End of Data Products-->
+				<!-- start website and chatbots -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Foundation Model</h2>
+											<span class="byline">Widely applicable, Work with prompts</span>
+										</header>
+										<p>
+											Foundation models are train on large amount of generic datasets.  These work out of box and suitable for man consumer scenarios. Consumers can use it or business can use prompting approach to build scenarios around foundation model.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/6-foundation-model/" class="button button-medium button-alt button-icon button-icon-rarrow">Foundation Models</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Domain specifc Model</h2>
+											<span class="byline">Narrow and specific model build on dataset</span>
+										</header>
+										<p>
+											Gen AI models will become doain specific. Domain specific model will train on industry/company specific data and will deeply integrate with workflows. However building domain specific model need dataset.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/18-domain-specific-models/" class="button button-medium button-icon button-icon-info">Build Moat</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+
+				</div>
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>LLM Guide</h2>
+										<span class="byline">LLM is new IP</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+
+
+
+					<div class="inner">
+
+						<section class="5grid-layout box-feature1">
+
+
+							<div class="row">
+
+
+
+								<div class="12u">
+
+
+
+									<header class="first major">
+
+
+
+										<h2>Large Language Model</h2>
+
+
+
+										<span class="byline">LLMs are build <strong> by training on large text data</strong> . These are useful to generate text, summarize document, answer questions, reason, translate, do SEO of web pages</span>
+
+
+
+									</header>
+
+
+
+								</div>
+							</div>
+
+							<div class="row">
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide2.png" alt="Slide 2 for LLM" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide3.png" alt="Slide 3 for LLM" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide4.png" alt="Slide 5 for generative AI" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+							</div>
+
+
+
+							<div class="row">
+
+
+
+								<div class="12u">
+
+
+
+									<h3 id="overview-of-large-language-models-llms">Overview of Large Language Models (LLMs)</h3>
+									<p>Large Language Models (LLMs) are a class of artificial intelligence models designed to understand, generate, and manipulate human language. These models are built using deep learning techniques, particularly neural networks with architectures such as transformers. LLMs are trained on vast amounts of text data, allowing them to capture intricate patterns, structures, and nuances of human language. They have the capacity to perform a variety of natural language processing (NLP) tasks, from text generation to translation and sentiment analysis.</p>
+									<h3 id="key-features-of-llms">Key Features of LLMs</h3>
+									<ol>
+										<li><strong>Scalability</strong>: LLMs are characterized by their large number of parameters, often ranging from billions to hundreds of billions. This size enables them to store and utilize extensive linguistic information.</li>
+										<li><strong>Versatility</strong>: They can handle a wide range of tasks including text completion, question answering, summarization, translation, and more.</li>
+										<li><strong>Contextual Understanding</strong>: By leveraging transformers&#39; attention mechanisms, LLMs can understand and generate text that is contextually relevant over long passages.</li>
+									</ol>
+									<h3 id="applications-of-large-language-models">Applications of Large Language Models</h3>
+									<ol>
+										<li><strong>Text Generation</strong>: Creating human-like text for applications such as chatbots, automated content creation, and storytelling.</li>
+										<li><strong>Machine Translation</strong>: Translating text between different languages with high accuracy.</li>
+										<li><strong>Sentiment Analysis</strong>: Determining the sentiment expressed in a piece of text, useful for market analysis and customer feedback.</li>
+										<li><strong>Summarization</strong>: Condensing long documents or articles into concise summaries while retaining key information.</li>
+										<li><strong>Question Answering</strong>: Answering questions posed by users based on a given context or document.</li>
+										<li><strong>Conversational Agents</strong>: Powering virtual assistants and chatbots to interact with users naturally and contextually.</li>
+										<li><strong>Code Generation</strong>: Assisting in writing and debugging code by generating code snippets based on textual descriptions.</li>
+									</ol>
+									<h3 id="open-source-vs-closed-llms">Open Source vs. Closed LLMs</h3>
+									<h4 id="open-source-llms">Open Source LLMs</h4>
+									<p><strong>Advantages</strong>:</p>
+									<ul>
+										<li><strong>Accessibility</strong>: Freely available for anyone to use, modify, and improve.</li>
+										<li><strong>Transparency</strong>: Users can inspect the model&#39;s architecture and training data.</li>
+										<li><strong>Community Support</strong>: Supported and enhanced by a community of developers and researchers.</li>
+									</ul>
+									<p><strong>Examples</strong>:</p>
+									<ul>
+										<li><strong>GPT-Neo/GPT-J</strong>: Developed by EleutherAI, these models are open-source alternatives to OpenAI&#39;s GPT-3.</li>
+										<li><strong>BERT</strong>: Developed by Google, BERT is a transformer-based model pre-trained on a large corpus of text.</li>
+										<li><strong>RoBERTa</strong>: An optimized version of BERT by Facebook AI, focusing on training with more data and longer sequences.</li>
+										<li><strong>T5 (Text-to-Text Transfer Transformer)</strong>: Developed by Google, T5 converts all NLP tasks into a text-to-text format.</li>
+									</ul>
+									<h4 id="closed-llms">Closed LLMs</h4>
+									<p><strong>Advantages</strong>:</p>
+									<ul>
+										<li><strong>Optimization</strong>: Often optimized for specific commercial applications and supported by robust infrastructure.</li>
+										<li><strong>Support and Maintenance</strong>: Backed by dedicated teams for maintenance, updates, and customer support.</li>
+										<li><strong>Data Security</strong>: May offer better data security and compliance features for enterprise use.</li>
+									</ul>
+									<p><strong>Examples</strong>:</p>
+									<ul>
+										<li><strong>GPT-3</strong>: Developed by OpenAI, GPT-3 is a powerful model with 175 billion parameters, available via an API.</li>
+										<li><strong>ChatGPT</strong>: Also by OpenAI, this variant of GPT-3 is fine-tuned for conversational tasks.</li>
+										<li><strong>Claude</strong>: Developed by Anthropic, Claude is designed with a focus on alignment and safety.</li>
+										<li><strong>DeepMind’s Gopher</strong>: A model by DeepMind designed for various NLP tasks, available through specific partnerships and collaborations.</li>
+									</ul>
+									<h3 id="conclusion">Conclusion</h3>
+									<p>Large Language Models represent a significant advancement in the field of artificial intelligence, offering versatile and powerful tools for a wide range of NLP tasks. Open source LLMs provide accessibility and community-driven development, while closed LLMs offer optimized performance and professional support. Both types of models have their unique advantages and are suited to different applications and user needs. As the field progresses, we can expect further innovations and expansions in the capabilities of LLMs.</p>
+
+
+
+								</div>
+
+
+
+							</div>
+
+
+
+						</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>Prompt Engineering</h2>
+										<span class="byline">Give insructions to Generative AI</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+
+
+
+					<div class="inner">
+
+						<section class="5grid-layout box-feature1">
+
+
+							<div class="row">
+
+
+
+								<div class="12u">
+
+
+
+									<header class="first major">
+
+
+
+										<h2>Prompt Engineering</h2>
+
+
+
+										<span class="byline"><strong> Design input in natural language</strong> to get results you want from LLM</span>
+
+
+
+									</header>
+
+
+
+								</div>
+							</div>
+
+							<div class="row">
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/prompt-engineering/images/Slide500/Slide1.png" alt="Slide 1 for Prompt Engineering and LLM" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/prompt-engineering/images/Slide500/Slide2.png" alt="Slide 2 prompt engineering" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+								<div class="4u">
+
+
+
+									<section>
+
+
+
+										<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/">
+
+
+
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/prompt-engineering/images/Slide500/Slide3.png" alt="Slide 3 for Prompt engineering" /></span>
+										</a>
+
+
+
+
+
+
+
+									</section>
+
+
+
+								</div>
+
+
+
+							</div>
+
+
+
+							<div class="row">
+
+
+
+								<div class="12u">
+
+
+
+									<p>
+
+
+
+										<li>Give instruction , Give persona, add delimeter</li>
+
+										<li>Add examples, provide steps to complete task</li>
+
+										<li>Specify output format such as HTML, JSON, Table to produce</li>
+
+
+									</p>
+
+
+
+								</div>
+
+
+
+							</div>
+
+
+
+						</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+				<!-- Start of AB Experiment -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="4u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Prompt Engineering</h2>
+											<span class="byline">Design inputs to get desired output</span>
+										</header>
+										<p>
+											Prompts enable you to guide genAI model to produce outcome in required format. Prompt help GenAI to break a complex problem into smaller task and enable reasoning
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/" class="button button-medium button-alt button-icon button-icon-info">Prompt Engineering</a>
+										</footer>
+									</section>
+								</div>
+								<div class="4u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Prompt Templates</h2>
+											<span class="byline">Blueprint and framework to create prompt</span>
+										</header>
+										<p>
+											Use a prompt template for consistency. Replace the placeholder element in prompt templates.  Save time and effort by reducing the need to write multiple similar prompts.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/prompt-templates/" class="button button-medium button-icon button-icon-rarrow">Prompt Templates</a>
+										</footer>
+									</section>
+								</div>
+								<div class="4u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Few Shot Learning</h2>
+											<span class="byline">Give examples to GenAI with prompt</span>
+										</header>
+										<p>
+											Give one or more examples instead of very detail instruction and generative AI will produce outcome specified in your examples. With very few examples you can change model output.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/11-prompt-engineering/few-shot-learning-slides.html" class="button button-medium button-icon button-icon-rarrow">Few shot Learning</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- End of AB Experiment -->
+				<!-- LLm -->
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>LLM Guide</h2>
+										<span class="byline">LLM is new IPI</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+					<div class="inner">
+						<section class="5grid-layout box-feature1">
+
+
+							<div class="row">
+								<div class="4u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide2.png" alt="LLM slide 2" /></span>
+										</a>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide3.png" alt="LLM Slide 3" /></span>
+										</a>
+									</section>
+								</div>
+								<div class="4u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide4.png" alt="LLM Slide 4" /></span>
+										</a>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+
+
+
+				</div>
+				<!-- Start of AB Experiment -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="4u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>LLM</h2>
+											<span class="byline">Generic and useful for variety of tasks</span>
+										</header>
+										<p>
+											LLMs are lrge model that are train on massive amount of text data. these are useful for many geenric tasks.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-alt button-icon button-icon-rarrow">Prompt Engineering</a>
+										</footer>
+									</section>
+								</div>
+								<div class="4u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Applications of LLM</h2>
+											<span class="byline">Data Science, NLP nd Code Generation</span>
+										</header>
+										<p>
+											LLMs can generate content, answer questions with reasoning, summarize existing document and stocks reports. LLMs are useful for code generation too.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-icon button-icon-info">Prompt Templates</a>
+										</footer>
+									</section>
+								</div>
+								<div class="4u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Open Source LLM</h2>
+											<span class="byline">Use LLM API or setup Open Source</span>
+										</header>
+										<p>
+											To build LLM appliation, first make a decision whether you will use Closed LLM API like OpenAI/Gemini/Claude etc or set up open source LLM like Llama3.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-icon button-icon-rarrow">Few shot Learning</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>LLM Guide 2</h2>
+										<span class="byline">LLM is new IPI</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+					<div class="inner">
+						<section class="5grid-layout box-feature1">
+
+
+							<div class="row">
+								<div class="6u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide2.png" alt="LLM slide 2" /></span>
+										</a>
+									</section>
+								</div>
+								<div class="6u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide3.png" alt="LLM Slide 3" /></span>
+										</a>
+									</section>
+								</div>
+
+							</div>
+						</section>
+					</div>
+
+
+
+				</div>
+				<!-- Start of AB Experiment -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>LLM</h2>
+											<span class="byline">Generic and useful for variety of tasks</span>
+										</header>
+										<p>
+											LLMs are lrge model that are train on masive amount of text data. these are useful for many geenric tasks.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-alt button-icon button-icon-rarrow">Prompt Engineering</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Applications of LLM</h2>
+											<span class="byline">Data Science, NLP nd Code Generation</span>
+										</header>
+										<p>
+											LLMs can generate content, answer questions with reasoning, summarize existing document and stocks reports. LLMs are useful for code generation too.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-icon button-icon-info">Prompt Templates</a>
+										</footer>
+									</section>
+								</div>
+
+							</div>
+						</section>
+					</div>
+				</div>
+
+
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>LLM Guide 3</h2>
+										<span class="byline">LLM is new IPI</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<div class="main-wrapper-style2">
+					<div class="inner">
+						<section class="5grid-layout box-feature1">
+
+
+							<div class="row">
+								<div class="12u">
+									<section>
+										<a href="https://www.dataknobs.com/generativeai/10-llms/">
+											<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide2.png" alt="LLM slide 2" /></span>
+										</a>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+
+
+
+				</div>
+				<!-- Start of AB Experiment -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="12u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>LLM</h2>
+											<span class="byline">Generic and useful for variety of tasks</span>
+										</header>
+										<p>
+											LLMs are large model that are train on masive amount of text data. these are useful for many geenric tasks.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/generativeai/10-llms/" class="button button-medium button-alt button-icon button-icon-rarrow">Prompt Engineering</a>
+										</footer>
+									</section>
+								</div>
+								
+
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>LLMs and Conversational AI</h2>
+										<span class="byline">LLMs can summarize document, create new content, search and answer questions.  The ability to answer question has led to development of chatbot/conversational agents. </span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<!-- Start of New  -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Custom Chatbots & LLMs</h2>
+											<span class="byline">Build custom chatbot for domain, brand and automation</span>
+										</header>
+										<p>
+											Use custom chatbot to use domain knowledge, customize responses and language to match your brand and comply with laws, . More importantly use custom chatbot for integration external system, automate workflows and gain competive advantages.
+
+										</p>
+										<footer>
+											<a href="https://stock-analysis-generation.dataknobs.com" target="_blank" class="button button-medium button-alt button-icon button-icon-info">Demo of Custom Bot</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Gen AI For Software Dev</h2>
+											<span class="byline">AI Assisted Software Engineering</span>
+										</header>
+										<p>
+											AIASE use artificial intelligence (AI) to augment the capabilities of software engineers. AIASE aims to improve the efficiency, quality, and reliability of software development by automating repetitive tasks, providing insights into code, and helping engineers to make better decisions.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/solutions/ai-assisted-software-engineering/" class="button button-medium button-icon button-icon-rarrow">Assist Code Development</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<!--End of privacy-->
+				<div class="main-wrapper-style1">
+					<div class="inner">
+
+						<!-- Feature 1 -->
+						<section class="5grid-layout box-feature1">
+							<div class="row">
+								<div class="12u">
+									<header class="first major">
+										<h2>Type of chatbots</h2>
+										<span class="byline">All chatbot need not have to use powerful LLMs. According to knowledge base and responsibility of chatbot different kind of bots are built.</span>
+									</header>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				<!-- Start of New  -->
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Customer onboarding and support</h2>
+											<span class="byline">Help customer make a decision whether to buy or not</span>
+										</header>
+										<p>
+											Use custom chatbot to use domain knowledge, customize responses and language to match your brand and comply with laws, . More importantly use custom chatbot for integration external system, automate workflows and gain competive advantages.
+
+										</p>
+										<footer>
+											<a href="https://stock-analysis-generation.dataknobs.com" target="_blank" class="button button-medium button-alt button-icon button-icon-info">Demo of Custom Bot</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Information Gathering bot</h2>
+											<span class="byline">Assist in preparing customer progile/file</span>
+										</header>
+										<p>
+											AIASE use artificial intelligence (AI) to augment the capabilities of software engineers. AIASE aims to improve the efficiency, quality, and reliability of software development by automating repetitive tasks, providing insights into code, and helping engineers to make better decisions.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/solutions/ai-assisted-software-engineering/" class="button button-medium button-icon button-icon-rarrow">Assist Code Development</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+
+
+						</section>
+					</div>
+				</div>
+
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>Plan Generation</h2>
+											<span class="byline">Assist in making plan as a knowledge worker</span>
+										</header>
+										<p>
+											Bot help you make a plan of actions e.g.  how to lose weight, how to gain muscle, which interior design is right for house, my financial plan, security plan for my app or startup.
+
+										</p>
+										<footer>
+											<a href="https://stock-analysis-generation.dataknobs.com" target="_blank" class="button button-medium button-alt button-icon button-icon-info">Demo of Custom Bot</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Task Execution</h2>
+											<span class="byline">Automate workflow</span>
+										</header>
+										<p>
+											Use Function calling to automate plan of actions. File my application to college, File my tax return, Create a invoice and submit to my customer, Build my time sheet and submit.
+
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/solutions/ai-assisted-software-engineering/" class="button button-medium button-icon button-icon-rarrow">Assist Code Development</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+
+
+
+				<div class="main-wrapper-style3">
+					<div class="inner">
+						<div class="5grid-layout">
+							<div class="row">
+								<div class="8u">
+
+									<!-- Article list -->
+									<section class="box-article-list">
+										<h2 class="icon icon-news">From the blog</h2>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Build Dataproducts</span>
+													<h3><a href="https://www.dataknobs.com/data-products/">How Dataknobs help in building data products</a></h3>
+												</header>
+												<p>
+													Enterprises are most successful when they treat data like a product.
+													It enable to use data in multiple use cases. However data product should be
+													designed differently compared to software product.
+												</p>
+											</div>
+										</article>
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Be Data Centric and well governed</span>
+													<h3><a href="https://www.dataknobs.com/data-centric-ai/">Generative AI is one of approach to build data product</a></h3>
+												</header>
+												<p>
+													Generative AI has enabled many transformative scenarios.
+													We combine generative AI, AI, automation, web scraping, ingesting dataset to build new data products.
+													We have expertise in generative AI, but for business benefit we define our goal to build data product in data centric manner.
+												</p>
+											</div>
+										</article>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Well governed data</span>
+													<h3><a href="https://www.dataknobs.com/blog/data-lineage/">Data Lineage and Extensibility</a></h3>
+												</header>
+												<p>
+													To build a commercial data product, create a base data product.
+													Then add extension to these data product by adding various types of transformation.
+													However it lead to complexity as you have to manage Data Lineage. Use knobs for lineage and extensibility
+												</p>
+											</div>
+										</article>
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Develop data products with KREATE and AB Experiment</span>
+													<h3><a href="https://www.dataknobs.com/blog/products/">Develop data products and check user response thru experiment</a></h3>
+												</header>
+												<p>
+													As per HBR " Data product require validation of both 1. whether algorithm work  2. whether user like it".
+													Builders of data product need to balance between investing in data-building and experimenting.
+													Our product KREATE focus on building dataset and apps , ABExperiment focus on ab testing. both are designed to meet data product development lifecycle
+												</p>
+											</div>
+										</article>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Innovate with experiments</span>
+													<h3><a href="https://www.dataknobs.com/orthogonal.html">Experiment faster and cheaper with knobs</a></h3>
+												</header>
+												<p>
+													In complex problems you have to run hundreds of experiments.
+													Plurality of method require in machine learning is extremely high.
+													With Dataknobs approach, you can experiment thru knobs.
+												</p>
+											</div>
+										</article>
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Why knobs matter</span>
+													<h3><a href="https://www.dataknobs.com/orthogonal.html">Knobs are levers using which you manage output</a></h3>
+												</header>
+												<p>See Drivetrain appproach for building data product, AI product. It has 4 steps and levers are key to success. Knobs are abstract mechanism on input that you can control.  </p>
+											</div>
+										</article>
+
+									</section>
+								</div>
+								<div class="4u">
+
+									<!-- Spotlight -->
+									<section class="box-spotlight pad-left">
+										<h2 class="icon icon-paper">Spotlight </h2>
+										<article>
+
+											<header>
+												<h3><a href="#">Generative AI slides</a></h3>
+												<span class="byline">Learn generative AI, LLM, foundation model</span>
+											</header>
+											<li>Learn generative AI - applications, LLM, architecture</li>
+											<li>See best practices for prompt engineering</li>
+											<li>Evaluate whether you should use out of box foundation model, fne tune or use in-context learning</li>
+											<li>Most important - be aware of concerns, issues, challenges, risk of genAI and LLM</li>
+											<li>See vendor comparison - Azure, OpenAI, GCP, Bard, Anthropic. Review framework for cost computation for LLM</li>
+											<footer>
+												<a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html" class="button button-alt button-icon button-icon-paper">Gen AI slides</a>
+											</footer>
+										</article>
+										<article>
+
+											<header>
+												<h3><a href="#">KREATE</a></h3>
+												<span class="byline">Adopt generative AI use case without risks</span>
+											</header>
+											<p>Our product KREATE can generate web design. Web design that are built to convert</p>
+											<p>Using KREATE you can publish marketing blog with ease. See KREATE in action</p>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreate/" class="button button-alt button-icon button-icon-paper">KREATE</a>
+											</footer>
+										</article>
+
+										<article>
+
+											<header>
+												<h3><a href="#">Fractional CTO for generative AI and Data Products</a></h3>
+												<span class="byline">Hire expertise without commitment<span>
+											</header>
+											<p>Startup and enterprise who wish to build their own data prodct can hire expertise to build Data product using generative AI</p>
+											<li>Generative AI expertise</li>
+											<li>Machine Learning expertise</li>
+											<li>Data product building expertise</li>
+											<li>Cloud - AWS, GCP,Azure</li>
+											<footer>
+												<a href="https://www.dataknobs.com/fractional-cto-ai/" class="button button-icon button-icon-paper">Fractional CTO</a>
+											</footer>
+										</article>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>About Dataknobs</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/about-dataknobs/">About us</a></li>
+										<li><a href="https://www.dataknobs.com/data-products/">Build Data Products</a></li>
+										<li><a href="https://www.dataknobs.com/data-centric-ai/">Data Centric AI</a></li>
+										<li><a href="https://www.dataknobs.com/causal-inference/">Causal Inference</a></li>
+										<li><a href="https://www.dataknobs.com/privacy/">Privacy approaches</a></li>
+										<li><a href="https://www.dataknobs.com/index_old.html">Old website</a></li>
+										<li><a href="https://www.dataknobs.com/use-cases.html">Use cases</a></li>
+										
+										
+									</ul>
+								</section>
+
+								<!-- Links -->
+								<section>
+									<h2>Products and capabilities</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/products/kreate/">Kreate</a></li>
+										<li><a href="https://www.dataknobs.com/products/kontrols/">Kontrols</a></li>
+										<li><a href="https://www.dataknobs.com/products/abexperiment/">AB Experiment</a></li>
+										<li><a href="#">Fact Distance</a></li>
+										<li><a href="https://www.dataknobs.com/fractional-cto-ai/">Fractional CTO for AI</a></li>
+										
+										
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>Generative AI</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/generativeai/">Overview benefit and limitations</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Generative AI 101 slides</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/adoption-framework.html">Generative AI Adoption Framework</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/elephant-and-monkey-generatedai-issues.html">Issues in Generated AI  story</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/elephant-monkey-story.html">Elephant and Monkey story</a></li>
+										<li><a href="https://www.dataknobs.com/generate-datasets/">Augment and Generate datasets</a></li>
+										<li><a href="https://www.dataknobs.com/datasets-blindspots/">Datasets Blindspots</a></li>
+										
+										
+										
+									
+									</ul>
+								</section>
+						
+							<!-- Links -->
+								<section>
+									<h2>Career</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/careers/">Jobs and career opportunities</a></li>
+										<li><a href="https://www.dataknobs.com/data-science.html">Data Science & ML opportunities</a></li>
+										<li><a href="https://www.dataknobs.com/data-analyst.html">Data Analyst opportunities</a></li>
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="6u">
+						
+							<!-- About -->
+								<section>
+									<h2>Engage with <strong>Dataknobs</strong> </h2>
+									<p>Historically software products are built thru code. 
+									Engage with us to explore how data product and platform should be built using knobs </p>
+									<a href="https://www.dataknobs.com/generativeai/workshop/" class="button button-alt button-icon button-icon-rarrow">Book a Genertaive AI workshop</a>
+									<a href="https://www.dataknobs.com/blog/" class="button  button-icon button-icon-paper">More @ blog</a>
+									<br/>
+									<br/>
+									<p>Want to learn more -</p>
+									<a href="https://www.dataknobs.com/data-centric-ai/" class="button button-alt button-icon button-icon-rarrow">Data Centric AI</a>
+									<a href="https://www.dataknobs.com/about-dataknobs/contact.html" class="button  button-icon button-icon-rarrow">Contact us</a>
+									
+								</section>
+						
+							<!-- Contact -->
+								<section>
+									<h2>Get in touch</h2>
+									<div class="5grid">
+										<div class="row">
+											<div class="6u">
+												<dl class="contact">
+													<dt>Linkedin</dt>
+													<dd><a href="https://www.linkedin.com/company/dataknobs/">Linkedin page</a></dd>
+													<dt>Facebook</dt>
+													<dd><a href="https://www.facebook.com/dataknobs/">Facebook page</a></dd>
+												</dl>
+											</div>
+											<div class="6u">
+												<dl class="contact">
+													<dt>Dataknobs (May 25)</dt>
+													<dd>
+														Redmond, WA,  USA
+													</dd>
+													<dt>Phone</dt>
+													<dd>425 341-1222</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</section>
+						
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<div id="copyright">
+								&copy; Dataknobs. All rights reserved |   Dataknobs<a href="https://www.dataknobs.com/"> Dataknobs</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+	</body>
+</html>

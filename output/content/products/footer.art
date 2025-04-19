@@ -1,0 +1,128 @@
+
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>About Dataknobs</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/about-dataknobs/">About us</a></li>
+										<li><a href="https://www.dataknobs.com/data-products/">Build Data Products</a></li>
+										<li><a href="https://www.dataknobs.com/data-centric-ai/">Data Centric AI</a></li>
+										<li><a href="https://www.dataknobs.com/causal-inference/">Causal Inference</a></li>
+										<li><a href="https://www.dataknobs.com/privacy/">Privacy approaches</a></li>
+										<li><a href="https://www.dataknobs.com/index_old.html">Old website</a></li>
+										<li><a href="https://www.dataknobs.com/use-cases.html">Use cases</a></li>
+										
+										
+									</ul>
+								</section>
+
+								<!-- Links -->
+								<section>
+									<h2>Products and capabilities</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/products/kreate/">Kreate</a></li>
+										<li><a href="https://www.dataknobs.com/products/kontrols/">Kontrols</a></li>
+										<li><a href="https://www.dataknobs.com/products/abexperiment/">AB Experiment</a></li>
+										<li><a href="#">Fact Distance</a></li>
+										<li><a href="https://www.dataknobs.com/fractional-cto-ai/">Fractional CTO for AI</a></li>
+										
+										
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>Generative AI</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/generativeai/">Overview benefit and limitations</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Generative AI 101 slides</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/adoption-framework.html">Generative AI Adoption Framework</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/elephant-and-monkey-generatedai-issues.html">Issues in Generated AI  story</a></li>
+										<li><a href="https://www.dataknobs.com/generativeai/elephant-monkey-story.html">Elephant and Monkey story</a></li>
+										<li><a href="https://www.dataknobs.com/generate-datasets/">Augment and Generate datasets</a></li>
+										<li><a href="https://www.dataknobs.com/datasets-blindspots/">Datasets Blindspots</a></li>
+										
+										
+										
+									
+									</ul>
+								</section>
+						
+							<!-- Links -->
+								<section>
+									<h2>Career</h2>
+									<ul class="style2">
+										<li><a href="https://www.dataknobs.com/careers/">Jobs and career opportunities</a></li>
+										<li><a href="https://www.dataknobs.com/data-science.html">Data Science & ML opportunities</a></li>
+										<li><a href="https://www.dataknobs.com/data-analyst.html">Data Analyst opportunities</a></li>
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="6u">
+						
+							<!-- About -->
+								<section>
+									<h2>Engage with <strong>Dataknobs</strong> </h2>
+									<p>Historically software products are built thru code. 
+									Engage with us to explore how data product and platform should be built using knobs </p>
+									<a href="https://www.dataknobs.com/generativeai/workshop/" class="button button-alt button-icon button-icon-rarrow">Book a Genertaive AI workshop</a>
+									<a href="https://www.dataknobs.com/blog/" class="button  button-icon button-icon-paper">More @ blog</a>
+									<br/>
+									<br/>
+									<p>Want to learn more -</p>
+									<a href="https://www.dataknobs.com/data-centric-ai/" class="button button-alt button-icon button-icon-rarrow">Data Centric AI</a>
+									<a href="https://www.dataknobs.com/about-dataknobs/contact.html" class="button  button-icon button-icon-rarrow">Contact us</a>
+									
+								</section>
+						
+							<!-- Contact -->
+								<section>
+									<h2>Get in touch</h2>
+									<div class="5grid">
+										<div class="row">
+											<div class="6u">
+												<dl class="contact">
+													<dt>Linkedin</dt>
+													<dd><a href="https://www.linkedin.com/company/dataknobs/">Linkedin page</a></dd>
+													<dt>Facebook</dt>
+													<dd><a href="https://www.facebook.com/dataknobs/">Facebook page</a></dd>
+												</dl>
+											</div>
+											<div class="6u">
+												<dl class="contact">
+													<dt>Dataknobs (May 25)</dt>
+													<dd>
+														Redmond, WA,  USA
+													</dd>
+													<dt>Phone</dt>
+													<dd>425 341-1222</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</section>
+						
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<div id="copyright">
+								&copy; Dataknobs. All rights reserved |   Dataknobs<a href="https://www.dataknobs.com/"> Dataknobs</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+

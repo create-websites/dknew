@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	
+	<head id="ctl00_head1">
+<meta name="google-site-verification" content="RVceKokUCmE6I_4EjvyNso7r-FabKr95sjVmUSOiUAI" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JF94J1W5MC');
+</script><title>
+	Comparision of TPU and GPU
+
+</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" content="Large language model and recommendation system can benefit from TPU (Tensor Processing Unit). Here is criteria and factors to use when comparing GPU vs TPU. Task that require low procesion can be efficently done by TPU. Task that require high precision can be better done by GPU." /><meta name="keywords" content="TPU, GPU, TPU GPU comparision, should you use GPU or TPU, factors to consider for TPU vs GPU, Large language model , recommendation system, TPU, Tensor Processing Unit, Criteria and factors to use when comparing GPU vs TPU,   low procesion task on TPU, can be efficently done by TPU, high precision task by GPU
+" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+		<script src="https://storage.googleapis.com/kreatewebsites/site6/js/jquery-1.8.3.min.js"></script>
+		<script src="https://storage.googleapis.com/kreatewebsites/site6/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+		<script src="https://storage.googleapis.com/kreatewebsites/site6/js/jquery.dropotron-1.2.js"></script>
+		<script src="https://storage.googleapis.com/kreatewebsites/site6/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/5grid/core.css" /><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/style.css" /><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="https://storage.googleapis.com/kreatewebsites/site6/css/ie7.css" /><![endif]-->
+
+
+
+
+	</head>
+  
+	<body class="no-sidebar">
+         
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="5grid-layout">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<header id="header">
+								
+									<!-- Logo -->
+										
+										<div class="inner">
+										
+											<h1> <a id="ctl00_topheader" class="mobileUI-site-name">Comparision of TPU and GPU
+</a></h1>
+										
+									        
+										</div>
+									
+									
+									<!-- Nav -->
+										<nav id="nav" class="mobileUI-site-nav">
+											<ul>
+												 <li><a id="ctl00_hyperlinkHome" href="https://www.dataknobs.com/">Home</a></li>
+												<!--
+														
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl07_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl08_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl09_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl10_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+												-->
+                                               
+											</ul>
+										</nav>
+								
+								</header>
+                               
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+
+		<div id="main-wrapper">
+
+				<div class="main-wrapper-style2">
+
+					<div class="inner">
+
+						<div class="5grid-layout">
+
+							<div class="row">
+
+									
+									<div class="12u mobileUI-main-content">
+										<div id="content">
+
+										<article>
+
+												
+													
+
+
+			
+				<header class="major">
+					<h2><span id="ctl00_ContentPlaceHolder1_title">Comparision of TPU and GPU
+</span></h2>			
+									
+					    <span class="byline"> <span id="ctl00_ContentPlaceHolder1_metadesc">Large language model and recommendation system can benefit from TPU (Tensor Processing Unit). Here is criteria and factors to use when comparing GPU vs TPU. Task that require low procesion can be efficently done by TPU. Task that require high precision can be better done by GPU.</span></span>
+					</header>
+    <br />  					
+
+									
+										
+										 <table id="ctl00_ContentPlaceHolder1_RepDetails" cellspacing="0" border="0">
+	<tr>
+		<td>
+
+											</td>
+	</tr><tr>
+		<td>
+											<span id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_labeltext"><font color="Black" size="4"><br/>TPU and GPU are both specialized hardware accelerators used for machine learning workloads, but there are a few key differences:
+<br/>
+<br/>GPU (Graphics Processing Unit):
+<br/>
+<br/>Originally designed for graphics and gaming, but works well for ML due to its parallel architecture.
+<br/>Produced by companies like NVIDIA, AMD, etc. Examples are NVIDIA Tesla V100, RTX 2080, etc.
+<br/>Typically has higher single-precision performance compared to TPU, so works better for models with a lot of single-precision math (e.g. computer vision models).
+<br/>More flexible and can run a wider range of ML frameworks (TensorFlow, PyTorch, MXNet, etc.) and non-ML workloads.
+<br/>TPU (Tensor Processing Unit):
+<br/>
+<br/>Designed specifically for machine learning by Google. Examples are TPU v2 and v3.
+<br/>Has higher performance for low-precision math (e.g. matrix multiplications with 8-bit integers) compared to GPU. This is good for models with high volume of parameter updates (e.g. large language models).
+<br/>Tightly integrated with TensorFlow and works best for models built with TensorFlow. Less flexible support for other ML frameworks or non-ML workloads.
+<br/>Typically available as a cloud service through Google Cloud TPUs. On-premises TPUs also available but more difficult to set up.
+<br/>So in summary:
+<br/>
+<br/>Use GPU if:
+<br/>
+<br/>You need high single-precision performance
+<br/>You need flexibility to run different ML frameworks or non-ML workloads
+<br/>You want an on-premises solution
+<br/>Use TPU if:
+<br/>
+<br/>Your models do a lot of low-precision math (e.g. large neural networks)
+<br/>You are using TensorFlow
+<br/>You want to leverage the TPUs as a cloud service
+<br/>
+<br/></font></span>
+											</td>
+	</tr><tr>
+		<td>
+											<span id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_labeltext"><font color="Black" size="4"><br/>Some models that can benefit significantly from TPUs include:
+<br/>
+<br/>Large language models: Models like BERT, GPT-3, and Transformer-XL have billions of parameters and do massive amounts of low-precision computation. TPUs can train these models much faster than GPUs due to their low-precision performance and scalability. Google's BERT model was originally trained on TPUs.
+<br/>
+<br/>Recommendation systems: Recommendation models also tend to be very large, with many embeddings and weights to optimize. The fast matrix multiplications and throughput of TPUs are well suited for these types of models. Many companies use TPUs to train their production recommendation systems.
+<br/>
+<br/>Generative networks: Models like WaveNet, PixelCNN, and StyleGAN perform a huge number of operations to generate realistic images, audio, text, etc. These types of unsupervised learning tasks benefit greatly from the low-precision performance and efficiency of TPUs.
+<br/>
+<br/>Reinforcement learning: RL models have to interact with environments by performing many trial-and-error operations. This requires fast low-precision computation and experimentation, which TPUs can provide better than GPUs. Google's DeepMind trained AlphaGo on TPUs.
+<br/>
+<br/>Highly quantized neural networks: Some models use extremely low precision (e.g. 1-4 bit) activations and weights to achieve huge performance gains. TPUs specialized dot-product units can perform 4-bit and 8-bit quantized matrix multiplications up to 30x faster than GPUs. This enables fast training of highly quantized models that would otherwise be impractical.
+<br/>
+<br/>In general, any model that can benefit from high throughput low-precision computation, fast matrix multiplications, and scalability is a good candidate for TPUs. This includes many large neural networks, especially in the fields of NLP, computer vision, reinforcement learning, and collaborative filtering.
+<br/>
+<br/>While GPUs still have strengths for some models that require high single-precision performance or more compute per chip, TPUs have enabled huge advances in model size and speed for many ML applications. Let me know if you have any other questions!</font></span>
+											</td>
+	</tr><tr>
+		<td>
+											<span id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_labeltext"><font color="Black" size="4"><br/>TPUs and GPUs can differ significantly in cost:
+<br/>
+<br/>TPUs:
+<br/>
+<br/>TPUs are typically available as a cloud service, like Google Cloud TPUs. This means you only pay for the time you use the TPUs, rather than having to buy the hardware upfront.
+<br/>
+<br/>Google Cloud TPU pricing is based on TPU core hours. As of 2019, 1 TPU v2 core (about 180 teraflops) costs $6.50/hour, and 1 TPU v3 core (about 420 teraflops) costs $8.50/hour.
+<br/>
+<br/>For large workloads, renting TPUs from a cloud provider like Google can be very cost effective since you get access to their latest hardware without the big upfront capital costs.
+<br/>
+<br/>GPUs:
+<br/>
+<br/>GPUs are often purchased upfront as physical hardware that you then own and operate yourself. High-end GPUs for machine learning, like the NVIDIA V100, can cost $50,000-$100,000 per GPU.
+<br/>
+<br/>GPUs also available as cloud services from providers like AWS, Azure and GCP. However, GPU cloud pricing is often higher than TPU cloud pricing. For example, 1 NVIDIA V100 on AWS costs $3/hour, 50% more than a TPU v3 core.
+<br/>
+<br/>Operating and maintaining your own on-prem GPU servers also incurs additional costs like power, cooling, IT overhead, etc. So all-in costs tend to be lower with cloud-based GPU/TPU options.
+<br/>
+<br/>In summary, TPUs typically provide a more cost-effective option, especially if using Google Cloud TPUs. However, GPUs can be better if you get them at a large enough scale, want maximum performance per chip, or need flexibility/control that comes with managing your own servers. The cost difference also depends a lot on how much computing power you actually need for your machine learning workloads.
+<br/>
+<br/>For small-to-medium sized ML projects, I would generally recommend starting with a cloud-based option like Google Cloud TPUs. Then you can scale to GPUs if needed for larger projects or more advanced models. Let me know if you have any other questions!</font></span>
+											</td>
+	</tr>
+</table>
+
+								
+	
+			
+
+	
+
+
+
+
+										</article>
+									
+										</div>
+									</div>
+							
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+					</div>
+
+		</div>
+
+
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+		
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+    
+						<div class="3u">
+						
+						
+								<section class="widget-links">
+									<h2>Main pages</h2>
+									<ul class="style2">
+										<a id="ctl00_hyperlink1"></a>
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl06_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl07_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl08_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl09_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl10_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							
+								<section class="widget-links">
+									<h2>Related Pages </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl01_title" href="https://www.dataknobs.com/generativeai/tpu/examples-models-for-tpu.html">Examples-models-for-tpu</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl02_title" href="https://www.dataknobs.com/generativeai/tpu/maximum-performance.html">Maximum-performance</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl03_title" href="https://www.dataknobs.com/generativeai/tpu/tpu-gpu-cost.html">Tpu-gpu-cost</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl04_title" href="https://www.dataknobs.com/generativeai/tpu/tpu-gpu.html">Tpu-gpu</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl05_title" href="https://www.dataknobs.com/generativeai/tpu/tpu-limitations.html">Tpu-limitations</a>
+            </li>	
+    <br />
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+										
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+					
+								<section class="widget-links">
+									<h2>Explore more </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl01_title" href="https://www.dataknobs.com/"><em><b>Home</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+						
+								<section class="widget-contact last">
+									<h2>Contact Us</h2>
+									<ul>
+										<li><a href="#" class="twitter">Twitter</a></li>
+										<li><a href="#" class="facebook">Facebook</a></li>
+										<li><a href="#" class="googleplus">Linkedin</a></li>
+									</ul>
+									<p>
+									Redmond, WA <br />
+									USA  </p>
+								</section>
+						
+						</div>
+                        
+					</div>
+					<div class="row">
+						<div class="12u">
+							 <div id="copyright">
+							&copy;  Design: <a id="ctl00_cright">Home</a> | <a id="ctl00_sitemap"></a>  | <a id="ctl00_privacypolicy" href="https://www.dataknobs.com/privacypolicy.html">Privacy Policy</a> | <a id="ctl00_footerfooter" href="https://www.dataknobs.com/">Home</a></asp:HyperLink> 
+			</div>
+								 <p></p>
+						</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+	</body>
+</html>

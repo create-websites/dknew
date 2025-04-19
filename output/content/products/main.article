@@ -1,0 +1,208 @@
+		
+		<!-- Main Wrapper -->
+			<div id="main-wrapper">
+				
+				<div class="main-wrapper-style2">
+					<div class="inner">
+
+						<!-- Feature 2 -->
+						<section class="5grid-layout box-feature2">
+							<div class="row">
+								<div class="6u">
+									<section class="pad-right">
+										<header class="major">
+											<h2>create Slides</h2>
+											<span class="byline">Effortless Presentation Creation with Kreate </span>
+										</header>
+										<p>
+											Provide KREATE with your key points, target audience, and desired style. Its AI engine then generates a well-structured presentation complete with compelling slides, relevant visuals, and clear messaging.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/products/kreate/presentations/" class="button button-medium button-alt button-icon button-icon-info">Start Creating</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u">
+									<section class="pad-left">
+										<header class="major">
+											<h2>Regenerate Presentations</h2>
+											<span class="byline">always stays current </span>
+										</header>
+										<p>
+											 KREATE integrates seamlessly with your existing knowledge base and automatically updates FAQs as your product information evolves. No more worrying about outdated or inaccurate information.
+										</p>
+										<footer>
+											<a href="https://www.dataknobs.com/products/kreatewebsites/examples" class="button button-medium button-icon button-icon-rarrow">See Examples</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="main-wrapper-style3">
+					<div class="inner">
+						<div class="5grid-layout">
+							<div class="row">
+								<div class="8u">
+
+									<!-- Article list -->
+									<section class="box-article-list">
+										<h2 class="icon icon-news">Capabilities</h2>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Kreate Websites</span>
+													<h3><a href="https://www.dataknobs.com/products/kreatewebsites/"></a>Generate websites and visualization</h3>
+												</header>
+												<p>
+													AI Twin goes beyond simply collecting data. It ingests raw signals from across your factory floor, from sensors on machines to environmental indicators.
+
+												</p>
+											</div>
+										</article>
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Kreate Bots</span>
+													<h3><a href="https://www.dataknobs.com/products/kreatebots/"></a>Generate AI Assitants</h3>
+												</header>
+												<p>
+													Build & deploy intelligent AI assistants, agents, and chatbots in days, not months.  Start building interactive assistants, agents, and chatbots without the coding hassle.
+												</p>
+											</div>
+										</article>
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Kreate Data Products</span>
+													<h3><a href="https://www.dataknobs.com/products/kreatebots/"></a>Data Products build right from start.</h3>
+												</header>
+												<p>
+													Harness the power of AI and generative AI to analyze and curate data from various sources (web, open datasets) through web scraping and data engineering. Combine these diverse datasets to identify trends, patterns, and relationships, revealing higher-level knowledge and understanding.
+												</p>
+											</div>
+										</article>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Kreate Datasets</span>
+													<h3><a href="https://www.dataknobs.com/products/ai-twin/">Create Datasets for AI</a></h3>
+												</header>
+												<p>
+													Fuel AI with meticulously crafted datasets. Deploy active learning, innovative generative models, and efficient optimal transport techniques alongside weak supervision to curate complete, well-governed datasets with exceptional predictive capabilities.
+												</p>
+											</div>
+										</article>
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">AI Twin</span>
+													<h3><a href="https://www.dataknobs.com/products/ai-twin/">A/B testing for dynamic conversation</a></h3>
+												</header>
+												<p>
+													Unify the physical and virtual worlds, fostering trust and clarity. Transform IoT and time-series data into human-comprehensible system health insights that unlock business decisions. AI Twin: your intelligent counterpart for virtual equipment optimization, leading to real-world performance improvements.
+												</p>
+											</div>
+										</article>
+
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">AB Experiment</span>
+													<h3><a href="https://www.dataknobs.com/products/ai-twin/">A/B testing for dynamic conversation</a></h3>
+												</header>
+												<p>
+													Abexperiment's A/B testing platform lets you experiment with different LLMs, it letyou play with different vector DBs and you can experiment with multiple retrieval stratgies.
+												</p>
+											</div>
+										</article>
+										<!-- Excerpt -->
+
+									</section>
+								</div>
+								<div class="4u">
+
+									<!-- Spotlight -->
+									<section class="box-spotlight pad-left">
+										<h2 class="icon icon-paper">Spotlight </h2>
+										<article>
+
+											<header>
+												<h3><a href="#">Pre Built Capabilities</a></h3>
+												<span class="byline">AI and Data Products</span>
+											</header>
+											<li>Capability deployed in production</li>
+											<li>Pre Built Agents with configurability</li>
+											<li>Ability to integrate withcustomer knowledgebase</li>
+											<li>Capability to get user feedback</li>
+											<li>Conversation History and Logging</li>
+											<li>Login functionality</li>
+											<li>User Maangement</li>
+											<li>Prompt Templates</li>
+
+
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreatebots/" class="button button-alt button-icon button-icon-paper">Try Bot</a>
+											</footer>
+										</article>
+
+
+										<article>
+
+											<header>
+												<h3><a href="#">Fractional CTO for Bots</a></h3>
+												<span class="byline">Hire expertise without commitment<span>
+											</header>
+											<p>Startup and enterprise who wish to build their own AI Asssitant can hire expertise to build </p>
+											<li>Conversation Agent Experise</li>
+											<li>LLM - OpenAI, Gemini</li>
+											<li>Vector DB and RAG</li>
+											<li>FienTuning LLM</li>
+											<li>Cloud - AWS, GCP,Azure</li>
+											<footer>
+												<a href="https://www.dataknobs.com/fractional-cto-ai/" class="button button-icon button-icon-paper">Fractional CTO</a>
+											</footer>
+										</article>
+
+										<article>
+
+											<header>
+												<h3><a href="#">Customization Team</a></h3>
+												<span class="byline">Services to adapt solution for customer data</span>
+											</header>
+											<p>Choose a partner with deep experience in delivering LLm based chatbot, Agents and Assistant</p>
+											<p>Hire experts who have built kreatebots  Stock, Finance AI assitant, real estate AI Agent, chatbot for travel </p>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreatebots/customization.html" class="button button-alt button-icon button-icon-paper">Delivery Team</a>
+											</footer>
+										</article>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer Wrapper -->
+			
+

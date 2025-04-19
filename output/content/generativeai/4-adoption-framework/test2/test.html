@@ -1,0 +1,1103 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	
+	<head id="ctl00_head1">
+<meta name="google-site-verification" content="RVceKokUCmE6I_4EjvyNso7r-FabKr95sjVmUSOiUAI" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JF94J1W5MC');
+
+</script><title>
+	Generative AI Adoption Framework Slides
+</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" content="Generative AI adoption framework - 4 quardants - low risk item where quality of out of box LLm model is good, low risk item where quality need improvement,  high risk item where better results are needed, high risk item where quality is very low. One should determine error rate and tolerance for error rate and accordingly implement generative AI." /><meta name="keywords" content="Generative AI adoption framework, 4 quardants ,low risk item where quality of out of box LLm model is good, low risk item where quality need improvement, high risk item where better results are needed, high risk item where quality is very low, error rate of LLM,  tolerance for error rate
+" /><link rel="icon" href="https://storage.googleapis.com/json_articles/dataknobs-logo-2.jpg" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery-1.8.3.min.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery.dropotron-1.2.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie7.css" /><![endif]-->
+
+
+
+
+	<meta name="description" content="Generative AI adoption framework - 4 quardants - low risk item where quality of out of box LLm model is good, low risk item where quality need improvement,  high risk item where better results are needed, high risk item where quality is very low. One should determine error rate and tolerance for error rate and accordingly implement generative AI." /><meta name="keywords" content="Generative AI adoption framework, 4 quardants ,low risk item where quality of out of box LLm model is good, low risk item where quality need improvement, high risk item where better results are needed, high risk item where quality is very low, error rate of LLM,  tolerance for error rate
+" /></head>
+  
+	<body class="no-sidebar">
+         
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="5grid-layout">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<header id="header">
+								
+									<!-- Logo -->
+										
+										<div class="inner">
+										
+											<h1> <a id="ctl00_topheader" class="mobileUI-site-name">Generative AI Adoption Framework Slides</a></h1>
+										
+									        
+										</div>
+									
+									
+									<!-- Nav -->
+										<nav id="nav" class="mobileUI-site-nav">
+											<ul>
+												 <li><a id="ctl00_hyperlinkHome" href="https://www.dataknobs.com/">Home</a></li>
+												<!--
+														
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl07_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl08_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl09_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl10_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl11_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl12_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl13_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl14_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl15_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl16_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+												-->
+                                               
+											</ul>
+										</nav>
+								
+								</header>
+                               
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+
+		<div id="main-wrapper">
+
+				<div class="main-wrapper-style2">
+
+					<div class="inner">
+
+						<div class="5grid-layout">
+
+							<div class="row">
+
+									
+									<div class="12u mobileUI-main-content">
+										<div id="content">
+
+										<article>
+
+												
+													
+
+
+		
+							
+										
+
+
+                                         
+					  <h2><span id="ctl00_ContentPlaceHolder1_title">Generative AI Adoption Framework Slides</span></h2>						
+										
+						 <span class="byline"> <span id="ctl00_ContentPlaceHolder1_metadesc">Generative AI adoption framework - 4 quardants - low risk item where quality of out of box LLm model is good, low risk item where quality need improvement,  high risk item where better results are needed, high risk item where quality is very low. One should determine error rate and tolerance for error rate and accordingly implement generative AI.</span></span>				
+                        <br />       
+     
+
+							<table id="ctl00_ContentPlaceHolder1_RepDetails" cellspacing="0" border="0">
+	<tr>
+		<td>
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide1.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_Image1" alt="SLIDE1" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide1.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide1.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide1.png">SLIDE1</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide2.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_Image1" alt="SLIDE2" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide2.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide2.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide2.png">SLIDE2</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide3.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_Image1" alt="SLIDE3" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide3.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide3.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide3.png">SLIDE3</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide4.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_Image1" alt="SLIDE4" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide4.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide4.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide4.png">SLIDE4</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide5.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_Image1" alt="SLIDE5" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide5.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide5.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide5.png">SLIDE5</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide6.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_Image1" alt="SLIDE6" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide6.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide6.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide6.png">SLIDE6</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide7.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_Image1" alt="SLIDE7" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide7.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide7.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide7.png">SLIDE7</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide8.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_Image1" alt="SLIDE8" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide8.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide8.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide8.png">SLIDE8</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide9.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_Image1" alt="SLIDE9" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide9.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide9.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide9.png">SLIDE9</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide10.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_Image1" alt="SLIDE10" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide10.png" src="https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide10.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/a3_visual/slides/generative-ai-adoption-framework/Slide10.png">SLIDE10</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+
+</td>
+	</tr>
+</table>
+										
+									<span id="ctl00_ContentPlaceHolder1_labeltext"></span>	
+
+                                                           														
+                            <br />
+                            <br />
+
+                               <table id="ctl00_ContentPlaceHolder1_RepComments" cellspacing="0" border="0">
+	<tr>
+		<td>
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl01_label2"><font color="Black" size="4"><h2>Adoption Framework for GenAI in Enterprises</h2></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl02_label2"><font color="Black" size="4"><li>Adoption framwork help companies determine areas where generative AI adoption can happen quickly. Areas that are less mission crticial and where out of box generative AI works well with low error rate are good candidate to onboard generative AI.</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl03_label2"><font color="Black" size="4"><li>Framework need to be structured. It shuold provide stages, best practices and how to evaluate risks and opportunties.</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl04_label2"><font color="Black" size="4"><li>Slides describe 5 stages of gnerative AI adoption phases.<li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl05_label2"><font color="Black" size="4"><li>It describe areas where out of box model can be used without issues.  It describe areas where out of box model will not work and there is opportunity to innovate</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl06_label2"><font color="Black" size="4"><li>Slide also describe how to extend AI risk and consider all ris for generative AI</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl07_label2"><font color="Black" size="4"><li>finally slide describe use caes that can be adopted with ease</li> </font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl08_label2"><font color="Black" size="4"><li>Mission critical areas where out of box model does not work - should be adopted at last stage. Companies should evaluate whether training on domain specific data will help. If building such model produce good result, it will provide competitive advantage</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl09_label2"><font color="Black" size="4"><div>
+  <table>
+    <tr>
+      <th>Factors to Consider for Generative AI Adoption</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>Data Availability: Assess the availability and quality of data required for training the generative AI model.</li>
+          <li>Computational Resources: Evaluate the computational resources needed to train and deploy the generative AI model.</li>
+          <li>Expertise and Skills: Determine the level of expertise and skills required to develop and maintain the generative AI model.</li>
+          <li>Ethical Considerations: Consider the ethical implications and potential biases associated with the generative AI model's outputs.</li>
+          <li>Legal and Regulatory Compliance: Ensure compliance with relevant laws and regulations when using generative AI.</li>
+          <li>Business Objectives: Align the adoption of generative AI with the organization's strategic goals and objectives.</li>
+          <li>Costs and Return on Investment: Evaluate the costs associated with implementing and maintaining generative AI, and assess the potential return on investment.</li>
+          <li>Security and Privacy: Address security and privacy concerns related to the data used and generated by the generative AI model.</li>
+          <li>User Acceptance: Consider the acceptance and usability of generative AI outputs by end-users or customers.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl10_label2"><font color="Black" size="4"><p>Book a workshop to discuss adoption</p></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl11_label2"><font color="Black" size="4"><h4>Email Text or Call</h4>
+<p>To book a workshop please send email from your business email address. </p>
+<a href= "mailto: workshop@dataknobs.com">Email to book workshop</a> Email Address : workshop@dataknobs.com
+<br/>You can also call us, send text or whats app at +1 4253411222</font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl12_label2"><font color="Black" size="4"><h3>Blog 4</h3>
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+<div class="main-wrapper-style3">
+<div class="inner">
+<div class="5grid-layout">
+<div class="row">
+<div class="8u">
+<!-- Article list -->
+<section class="box-article-list">
+<h2 class="icon icon-news">From the blog</h2>
+<!-- Excerpt -->
+<article class="box-excerpt">
+<div>
+<header>
+<span class="date">Build Dataproducts</span>
+<h3><a href="https://www.dataknobs.com/data-products/">How Dataknobs help in building data products</a></h3>
+</header>
+<p>Enterprises are most successful when they treat data like a product.  It enable to use data in multiple use cases. However data product should be designed differently compared to software product.
+</p>
+</div>
+</article>
+<article class="box-excerpt">
+<div>
+<header>
+<span class="date">Be Data Centric and well governed</span>
+<h3><a href="https://www.dataknobs.com/data-centric-ai/">Generative AI is one of approach to build data product</a></h3>
+</header>
+<p>Generative AI has enabled many transformative scenarios. We combine generative AI, AI, automation, web scraping, ingesting dataset to build new data products. We have expertise in generative AI, but for business benefit we define our goal to build data product in data centric manner.
+</p>
+</div>
+</article>
+<article class="box-excerpt">
+<div>
+<header>
+<span class="date">Be Data Centric and well governed</span>
+<h3><a href="https://www.dataknobs.com/data-centric-ai/">Generative AI is one of approach to build data product</a></h3>
+</header>
+<br/>Generative AI has enabled many transformative scenarios.
+<br/>We combine generative AI, AI, automation, web scraping, ingesting dataset to build new data products.
+<br/>We have expertise in generative AI, but for business benefit we define our goal to build data product in data centric manner.
+</div>
+</article>
+<!-- Excerpt -->
+</section>
+</div>
+<div class="4u">
+<!-- Spotlight -->
+<section class="box-spotlight pad-left">
+<h2 class="icon icon-paper">Spotlight </h2>
+<article>
+<header>
+<h3><a href="#">Generative AI slides</a></h3>
+<span class="byline">Learn generative AI, LLM, foundation model</span>
+</header>
+<li>Learn generative AI - applications, LLM, architecture</li>
+<li>See best practices for prompt engineering</li>
+<li>Evaluate whether you should use out of box foundation model, fne tune or use in-context learning</li>
+<li>Most important - be aware of concerns, issues, challenges, risk of genAI and LLM</li>
+<li>See vendor comparison - Azure, OpenAI, GCP, Bard, Anthropic. Review framework for cost computation for LLM</li>
+<footer>
+<a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html" class="button button-alt button-icon button-icon-paper">Gen AI slides</a>
+</footer>
+</article>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+
+</td>
+	</tr>
+</table>    
+                            <br />
+                            <br />
+                             <div class="fb-activity" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+	
+								
+                                <div class="fb-comments" data-href="https://www.dataknobs.com/" data-numposts="5" data-colorscheme="light" data-order-by="reverse_time"></div>
+			
+<!--
+                            <div class="fb-post" data-href="https://www.facebook.com/DiwaliCelebrations" data-width="500"></div>		
+                              <div class="fb-recommendations" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+		
+                            -->
+     
+
+    
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl01_title" href="https://www.dataknobs.com/generativeai/4-adoption-framework/test2/test.html">Test</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+						
+		<span id="ctl00_ContentPlaceHolder1_label1"></span>	
+
+                                                           														
+ 
+           <span id="ctl00_ContentPlaceHolder1_ad728_ad">
+</span>
+                                        <br /><br />
+
+    <!--
+				 <a id="ctl00_ContentPlaceHolder1_buttonmain" class="button"></a>
+                                                            <a id="ctl00_ContentPlaceHolder1_buttonall" class="button button-alt"></a>	
+    -->
+												
+
+
+
+
+
+										</article>
+									
+										</div>
+									</div>
+							
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+					</div>
+
+		</div>
+
+
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+		
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+    
+						<div class="3u">
+						
+						
+								<section class="widget-links">
+									<h2>Main pages</h2>
+									<ul class="style2">
+										<a id="ctl00_hyperlink1"></a>
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl06_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl07_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl08_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl09_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl10_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl11_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl12_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl13_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl14_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl15_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl16_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							
+								<section class="widget-links">
+									<h2>Related Pages </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl01_title" href="https://www.dataknobs.com/generativeai/4-adoption-framework/test2/test.html">Test</a>
+            </li>	
+    <br />
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+										
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+					
+								<section class="widget-links">
+									<h2>Explore more </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl01_title" href="https://www.dataknobs.com/"><em><b>Home</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+						
+								<section class="widget-contact last">
+									<h2>Contact Us</h2>
+									<ul>
+										<li><a href="#" class="twitter">Twitter</a></li>
+										<li><a href="#" class="facebook">Facebook</a></li>
+										<li><a href="#" class="googleplus">Linkedin</a></li>
+									</ul>
+									<p>
+									Redmond, WA <br />
+									USA  </p>
+								</section>
+						
+						</div>
+                        
+					</div>
+					<div class="row">
+						<div class="12u">
+							 <div id="copyright">
+							&copy;  Design: <a id="ctl00_cright">Home</a> | <a id="ctl00_sitemap"></a>  | <a id="ctl00_privacypolicy" href="https://www.dataknobs.com/privacypolicy.html">Privacy Policy</a> | <a id="ctl00_footerfooter" href="https://www.dataknobs.com/">Home</a></asp:HyperLink> 
+			</div>
+								 <p></p>
+						</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+	</body>
+</html>

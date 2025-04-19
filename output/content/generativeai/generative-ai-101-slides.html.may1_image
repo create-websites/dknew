@@ -1,0 +1,3287 @@
+<!DOCTYPE HTML>
+
+
+
+<html lang="en">
+
+
+
+<html>
+
+
+
+	<head>
+
+		<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-JF94J1W5MC');
+
+</script>
+
+
+
+		<title>Generative AI 101 Slides - DataKnobs</title>
+
+
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+		<meta name="description" content="Slides for Generative AI 101 - agenda is history of generative AI, application currently in use, application that are evolving, modeling architecture for generatuve ai, generative ai limitations. Learn risk of using genrative AI in finance. Compliance issues and how to mitigate those " />
+
+
+
+		<meta name="keywords" content="Slides for Generative AI, Generative AI 101, Agenda of generative AI, history of generative AI, application of generative AI, Evolving applications, modeling architecture for generatuve ai, generative ai limitations, risk of using genrative AI in finance. Compliance issues, mitigations for using generative AI, test cases for generative AI " />
+
+
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+
+
+
+		<script src="https://images.dataknobs.com/site6/js/jquery-1.8.3.min.js"></script>
+
+
+
+		<script src="https://images.dataknobs.com/site6/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+
+
+
+		<script src="https://images.dataknobs.com/site6/js/jquery.dropotron-1.2.js"></script>
+
+
+
+		<script src="https://images.dataknobs.com/site6/js/init.js"></script>
+
+
+
+		<noscript>
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/5grid/core.css" />
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/5grid/core-desktop.css" />
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/5grid/core-1200px.css" />
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/5grid/core-noscript.css" />
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/style.css" />
+
+
+
+			<link rel="stylesheet" href="https://images.dataknobs.com/site6/css/style-desktop.css" />
+
+
+
+		</noscript>
+
+
+
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+
+
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+
+
+
+		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+
+
+		<!-- Google tag (gtag.js) -->
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z92L4SV451">
+
+
+
+</script>
+
+
+
+<script>
+
+
+
+  window.dataLayer = window.dataLayer || [];
+
+
+
+  function gtag(){dataLayer.push(arguments);}
+
+
+
+  gtag('js', new Date());
+
+
+
+
+
+
+
+  gtag('config', 'G-Z92L4SV451');
+
+
+
+</script>
+
+
+
+	</head>
+
+
+
+	<body class="no-sidebar">
+
+
+
+
+
+
+
+		<!-- Header Wrapper -->
+
+
+
+			<div id="header-wrapper">
+
+
+
+				<div class="5grid-layout">
+
+
+
+					<div class="row">
+
+
+
+						<div class="12u">
+
+
+
+						
+
+
+
+							<!-- Header -->
+
+
+
+								<header id="header">
+
+
+
+									<div class="inner">
+
+
+
+									
+
+
+
+										<!-- Logo -->
+
+
+
+											<h1><a href="https://www.dataknobs.com/" class="mobileUI-site-name">Dataknobs</a></h1>
+
+
+
+										
+
+
+
+										<!-- Nav -->
+
+
+
+											<nav id="nav" class="mobileUI-site-nav">
+
+
+
+												<ul>
+
+
+
+													<li class="current_page_item"><a href="https://www.dataknobs.com/">Home</a></li>
+
+
+
+													<li>
+
+
+
+														<a href="" class="arrow">Services</a>
+
+
+
+														<ul>
+
+
+
+															<li><a href="#">Workshop</a></li>
+
+
+
+															<li>
+
+
+
+																<span class="arrow">Professional Services</span>
+
+
+
+																<ul>
+
+
+
+																	<li><a href="#">Data architecture to build knobs</a></li>
+
+
+
+																	<li><a href="#">Enable building data products</a></li>
+
+
+
+																	<li><a href="#">Part time CDO</a></li>
+
+
+
+															
+
+
+
+																</ul>
+
+
+
+															</li>
+
+
+
+															<li><a href="https://www.dataknobs.com/generate-datasets/">Generate & augment datasets</a></li>
+
+
+
+														</ul>
+
+
+
+													</li>
+
+
+
+													<li><a href="#">Productized Services</a></li>
+
+
+
+													<li><a href="https://www.dataknobs.com/blog/">Blog</a></li>
+
+
+
+													<li><a href="https://www.dataknobs.com/about-dataknobs/">About us</a></li>
+
+
+
+												</ul>
+
+
+
+											</nav>
+
+
+
+									
+
+
+
+									</div>
+
+
+
+								</header>
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+			</div>
+
+
+
+		
+
+
+
+		<!-- Main Wrapper -->
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Generative AI 101 Slides</h2>
+
+
+
+											<span class="byline">Agenda - Overview, history, current state, whats coming,  <strong>limitations and mitigations</strong> </span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide1.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide1.png" alt="Slide 1 for generative AI 101" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide2.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide2.png" alt="Slide 2 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide3.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide3.png" alt="Slide 3 for generative AI 101" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>Learn how software evolved from coding to data driven ML.
+
+
+
+										Now genertive AI is even generating data and code. This will change product business model and also product management.
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Applications of Generative AI</h2>
+
+
+
+											<span class="byline">Generative AI applications today <strong> Evolving areas</strong> for enterprises</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/1-applications/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide4.png" alt="Slide 4 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/1-applications/Slide5.html">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide5.png" alt="Slide 5 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/1-applications/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide6.png" alt="Slide 6 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>
+
+
+
+										<li>Writing content, summarizing text, Q&A, Assisting in code writing are areas where generative AI has shown promising results.</li>
+
+										<li>Generating experience e.g Product KREATE, reinventing workflows, creating ideas for new products - are ares where more pregress is coming</li>
+
+										<li>In addition experienced team are including geenrative AI for creating and augmenting datasets.</li>
+
+
+
+										With Generative AI progress - one should also consider how AI threats are changing too - new threats, change to existing threats and expansion of new threats</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Tech Stack and modeling architectures</h2>
+
+
+
+											<span class="byline">There are many architectures - Transformer Auto encoder, GAN, Diffusion model and RL</span>
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/2-modeling-architectures/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide7.png" alt="Slide 7 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/2-modeling-architectures/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide8.png" alt="Slide 8 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/2-modeling-architectures/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide9.png" alt="Slide 9 for generative AI 101" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>
+
+											Generative AI is based on "comprehend existing" data and determine trajectories data can take. It uses it for geenration
+
+
+
+										<li>Diffusion architecture is suitable for generation</li>
+
+										<li>Transformer are suitable for language gentration in sequence</li>
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>How to Evaluate Gen AI</h2>
+
+
+
+											<span class="byline">Identify what is important - <strong> Creativity, Realisim , Diversity</strong> and then evaluate</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/3-how-to-evaluate/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide10.png" alt="Slide 10 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/3-how-to-evaluate/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide11.png" alt="Slide 11 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/3-how-to-evaluate/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide12.png" alt="Slide 12" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>  Traditional machine learning model has evaluaition metrics like accuracy. Generative AI creates new data. It evaluation is based on subjecive
+
+												measures like diversity of data, realism, nobalty, creativity. It is hard to evaluate or benchmark geenrative models.
+
+										
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Generative AI adoption framework</h2>
+
+
+
+											<span class="byline">Consider High Risk vs Low Risk application.  Also consider generic data vs custom data dimension</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/4-adoption-framework/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide13.png" alt="Slide 13 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/4-adoption-framework/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide14.png" alt="Slide 14 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://www.dataknobs.com/generativeai/4-adoption-framework/">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide15.png" alt="Slide 15 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>Use above dimensions to identify quardant of your use case(s). Low risk and applicability of generic data e.g content writing for sales,travel guide are easy to adopt.
+
+											<li>Areas where universal data is available but risk of geenrating wrong results are high - it is opportunity for companies that want to train and sell custom models</li>
+
+											<li>Areas where task specifci fine tuning is needed, is opprtunity for services companies</li>
+
+											<li>Companies that want to build defendable IP will focus on create new dataset and model training on these dataset for areas where risk is high and universal dataset are not available.</li>
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Trade off and Conflicts</h2>
+
+
+
+											<span class="byline">Challenges, Ethical Issues, Copyright issues, Data ownership question, Environmental issues</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide16.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide16.png" alt="Slide 13 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide17.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide17.png" alt="Slide 14 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide18.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide18.png" alt="Slide 15 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>Generative AI has potential, but there are many challenges and open questions. One should consider these before using geenrative AI in enterprise(s)
+
+
+
+										
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Uncontrolled data production</h2>
+
+
+
+											<span class="byline">LLM, Image generation can produce variety but There is very less control how new data will be generated</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide19.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide19.png" alt="Slide 13 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide20.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide20.png" alt="Slide 14 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide21.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide21.png" alt="Slide 15 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>Generative AI is based on "comprehend existing" data and determine trajectories data can take. It uses it for creating new data.  However the method of producing new variation of data makes it controllable.
+
+											<li>Generative Model output is unpredicatble and uncontrollable. Main issue is - how to get confidence if you want to use it in mission critical envioronment.<li>
+
+
+
+											<li>Large language Model (LLM) inherit bias from data they are trained on.<li>
+
+											<li>There are open questions on who have copy right on generated content. In future there may be new laws that will impact consumers of generative AI<li></li>
+
+											<li>LLM or Image model that are trained on universal data and produce new data are compute intensive. There are impact of enviornment one need to consider.</li>
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Enviornment concern and legal question</h2>
+
+
+
+											<span class="byline">One need to responsibly use Generative AI</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide22.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide22.png" alt="Slide 22 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide23.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide23.png" alt="Slide 23 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide24.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide24.png" alt="Slide 24 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>There is significant amount of compute, energy usage. There is significant amount of carbon emission. One need to ensure it is for good cause and not for producing variation(s)
+
+
+
+										<li>Dataknobs has created set of controls to handle this<li>
+
+
+
+
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Digital Human</h2>
+
+
+
+											<span class="byline">Digital Human is type of generative AI to handle complete interaction with customers</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide25.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide25.png" alt="Slide 25 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide26.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide26.png" alt="Slide 26 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide27.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide27.png" alt="Slide 27 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>Here is framework for Digital Agent, Virtual Assistant, Digital Inluencer and Digital Human.
+
+
+
+									
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Virtual Agent to Digital Human</h2>
+
+
+
+											<span class="byline">Use this framework to determine what kind of capabilities generative AI should add</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide28.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide28.png" alt="Slide 28 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide29.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide29.png" alt="Slide 29 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide30.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide30.png" alt="Slide 30 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>
+
+
+
+											<li>Virtual Agent/Digital Agent are for one off task.<li>
+
+
+
+												<li>Virtual assistant carry context and are ongoing engagement<li>
+
+													<li>Digital influencer add experience and emotion into interaction<li>
+
+												<li>Digtial Human provide experience/emotion for ongoing engagement.</li>
+
+		
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Foundation Model</h2>
+
+
+
+											<span class="byline">Act as platform. They can be use as out of box and advanced model can be trained on these.</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide31.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide31.png" alt="Slide 31 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide32.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide32.png" alt="Slide 32 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide33.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide33.png" alt="Slide 33 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>
+
+
+
+											<li>Foundation model work out of box for universal scenarios.<li>
+
+
+
+												<li>Specific models can be trained on these.<li>
+
+													<li>Reduce the labeling requirements<li>
+
+												
+
+		
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<div id="main-wrapper">
+
+
+
+				<div class="main-wrapper-style1">
+
+
+
+					<div class="inner">
+
+
+
+				
+
+
+
+						<!-- Feature 1 -->
+
+
+
+							<section class="5grid-layout box-feature1">
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<header class="first major">
+
+
+
+											<h2>Consideration to Extend Foundation Model</h2>
+
+
+
+											<span class="byline">Consider extending Foundation model for compettive advantage</span>
+
+
+
+										</header>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide34.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide34.png" alt="Slide 34 for generative AI" /></span></a>
+
+
+
+											
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide35.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide35.png" alt="Slide 35 for generative AI 101" /></span></a>
+
+
+
+					
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+									<div class="4u">
+
+
+
+										<section>
+
+
+
+											<a href="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide36.png">
+
+
+
+											<span class="image image-full"><img src="https://storage.googleapis.com/a3_visual/slides/generativeai-101/Slide36.png" alt="Slide 36 for generative AI" /></span></a>
+
+
+
+								
+
+
+
+										</section>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+								<div class="row">
+
+
+
+									<div class="12u">
+
+
+
+										<p>
+
+
+
+											<li>Extend and Fine tune for specific task<li>
+
+
+
+												<li>Train custom model for specific domain<li>
+
+													<li>Build datasets on which you can train model<li>
+
+												
+
+		
+
+
+
+										</p>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Footer Wrapper -->
+
+
+
+		<div id="footer-wrapper">
+
+
+
+			<footer id="footer" class="5grid-layout">
+
+
+
+				<div class="row">
+
+
+
+					<div class="3u">
+
+
+
+					
+
+
+
+						<!-- Links -->
+
+
+
+							<section>
+
+
+
+								<h2>About Dataknobs</h2>
+
+
+
+								<ul class="style2">
+
+
+
+									<li><a href="https://www.dataknobs.com/about-dataknobs/">About us</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/index_old.html">Old website</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/causal-inference/">Causal Inference</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/privacy/">Privacy approaches</a></li>
+
+
+
+							
+
+
+
+									
+
+
+
+									
+
+
+
+								</ul>
+
+
+
+							</section>
+
+
+
+
+
+
+
+							<!-- Links -->
+
+
+
+							<section>
+
+
+
+								<h2>Products</h2>
+
+
+
+								<ul class="style2">
+
+
+
+									<li><a href="#">Kreate</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/products/kreate/">AB Experiment</a></li>
+
+
+
+									<li><a href="#">Fact Distance</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+							</section>
+
+
+
+					
+
+
+
+					</div>
+
+
+
+					<div class="3u">
+
+
+
+					
+
+
+
+						<!-- Links -->
+
+
+
+							<section>
+
+
+
+								<h2>Generative AI</h2>
+
+
+
+								<ul class="style2">
+
+
+
+									<li><a href="https://www.dataknobs.com/generativeai/">Overview benefit and limitations</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html">Generative AI 101 slides</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/generativeai/adoption-framework.html">Generative AI Adoption Framework</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/generativeai/elephant-and-monkey-generatedai-issues.html">Issues in Generated AI  story</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/generativeai/elephant-monkey-story.html">Elephant and Monkey story</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/generate-datasets/">Augment and Generate datasets</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/datasets-blindspots/">Datasets Blindspots</a></li>
+
+
+
+									
+
+
+
+									
+
+
+
+									
+
+
+
+								
+
+
+
+								</ul>
+
+
+
+							</section>
+
+
+
+					
+
+
+
+						<!-- Links -->
+
+
+
+							<section>
+
+
+
+								<h2>Career</h2>
+
+
+
+								<ul class="style2">
+
+
+
+									<li><a href="https://www.dataknobs.com/careers/">Jobs and career opportunities</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/data-science.html">Data Science & ML opportunities</a></li>
+
+
+
+									<li><a href="https://www.dataknobs.com/data-analyst.html">Data Analyst opportunities</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+							</section>
+
+
+
+					
+
+
+
+					</div>
+
+
+
+					<div class="6u">
+
+
+
+					
+
+
+
+						<!-- About -->
+
+
+
+							<section>
+
+
+
+								<h2>Engage with <strong>Dataknobs</strong> </h2>
+
+
+
+								<p>Historically software products are built thru code. 
+
+
+
+								Engage with us to explore how data product and platform should be built using knobs </p>
+
+
+
+								<a href="https://www.dataknobs.com/blog/" class="button button-alt button-icon button-icon-rarrow">More @ blog</a>
+
+
+
+							</section>
+
+
+
+					
+
+
+
+						<!-- Contact -->
+
+
+
+							<section>
+
+
+
+								<h2>Get in touch</h2>
+
+
+
+								<div class="5grid">
+
+
+
+									<div class="row">
+
+
+
+										<div class="6u">
+
+
+
+											<dl class="contact">
+
+
+
+												<dt>Linkedin</dt>
+
+
+
+												<dd><a href="https://www.linkedin.com/company/dataknobs/">Linkedin page</a></dd>
+
+
+
+												<dt>Facebook</dt>
+
+
+
+												<dd><a href="https://www.facebook.com/dataknobs/">Facebook page</a></dd>
+
+
+
+											</dl>
+
+
+
+										</div>
+
+
+
+										<div class="6u">
+
+
+
+											<dl class="contact">
+
+
+
+												<dt>Dataknobs</dt>
+
+
+
+												<dd>
+
+
+
+													Redmond, WA,  USA
+
+
+
+												</dd>
+
+
+
+												<dt>Phone</dt>
+
+
+
+												<dd>425 341-1222</dd>
+
+
+
+											</dl>
+
+
+
+										</div>
+
+
+
+									</div>
+
+
+
+								</div>
+
+
+
+							</section>
+
+
+
+					
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+				<div class="row">
+
+
+
+					<div class="12u">
+
+
+
+						<div id="copyright">
+
+
+
+							&copy; Dataknobs. All rights reserved |   Dataknobs<a href="http://www.dataknobs.com/"> Dataknobs</a>
+
+
+
+						</div>
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+			</footer>
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</body>
+
+
+
+</html>

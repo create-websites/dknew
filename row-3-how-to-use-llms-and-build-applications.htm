@@ -1,0 +1,177 @@
+		<div id="main-wrapper">
+			<div class="main-wrapper-style1">
+				<div class="inner">
+					<section class="5grid-layout box-feature1">
+						<div class="row">
+							<div class="12u">
+								<header class="first major">
+									<h2>How to use LLMs and build applications</h2>
+									<span class="byline">Consideration while selecting - <strong> Open Source vs Closed LLM</strong> Closed Model can be access via API and have a cost. Open Model have less cost, more control but may require significant work</span>
+								</header>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="4u">
+								<section>
+									<a href="https://www.dataknobs.com/generativeai/10-llms/">
+										<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide5.png" alt="Slide 5 for LLM" /></span>
+									</a>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<a href="https://www.dataknobs.com/generativeai/10-llms/">
+										<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide6.png" alt="Slide 6 for LLM" /></span>
+									</a>
+
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<a href="https://www.dataknobs.com/generativeai/10-llms/">
+										<span class="image image-full"><img src="https://createweb.blob.core.windows.net/images/llms/Slide7.png" alt="Slide 7 for LLM" /></span>
+									</a>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<h3 id="how-to-use-llms-and-build-applications-using-llms">How to Use LLMs and Build Applications Using LLMs</h3>
+								<p>Large Language Models (LLMs) like GPT-3, BERT, and others have revolutionized natural language processing and have a wide range of applications. Here’s a guide on how to use LLMs and build applications using them:</p>
+								<h3 id="1-understand-the-basics">1. Understand the Basics</h3>
+								<h4 id="key-concepts">Key Concepts:</h4>
+								<ul>
+									<li><strong>Tokens</strong>: The smallest units of text the model processes.</li>
+									<li><strong>Parameters</strong>: The weights and biases that the model learns during training.</li>
+									<li><strong>Pre-training and Fine-tuning</strong>: Pre-training on a large corpus and fine-tuning on specific tasks.</li>
+								</ul>
+								<h3 id="2-select-an-llm">2. Select an LLM</h3>
+								<h4 id="open-source-options">Open Source Options:</h4>
+								<ul>
+									<li><strong>GPT-Neo/GPT-J</strong>: Available on platforms like Hugging Face.</li>
+									<li><strong>BERT/RoBERTa</strong>: Available on the Hugging Face Model Hub.</li>
+									<li><strong>T5</strong>: Also available on Hugging Face.</li>
+								</ul>
+								<h4 id="closed-source-options">Closed Source Options:</h4>
+								<ul>
+									<li><strong>GPT-3</strong>: Accessible via OpenAI&#39;s API.</li>
+									<li><strong>Claude</strong>: Accessible via Anthropic’s API.</li>
+									<li><strong>DeepMind’s Gopher</strong>: Available through specific collaborations.</li>
+								</ul>
+								<h3 id="3-setup-environment">3. Setup Environment</h3>
+								<h4 id="install-required-libraries">Install Required Libraries:</h4>
+<pre><code class="language-bash">pip install transformers torch
+</code></pre>
+								<h4 id="obtain-api-keys">Obtain API Keys:</h4>
+								<p>For closed-source models like GPT-3, you&#39;ll need an API key from the provider (e.g., OpenAI).</p>
+								<h3 id="4-using-llms-for-basic-tasks">4. Using LLMs for Basic Tasks</h3>
+								<h4 id="example-text-generation-with-gpt-3">Example: Text Generation with GPT-3</h4>
+<pre><code class="language-python">import openai
+
+openai.api_key = &#39;YOUR_API_KEY&#39;
+
+response = openai.Completion.create(
+  model=&quot;text-davinci-003&quot;,
+  prompt=&quot;Write a short story about a robot learning to cook.&quot;,
+  max_tokens=150
+)
+
+print(response.choices[0].text.strip())
+</code></pre>
+								<h4 id="example-using-hugging-face-transformers-for-text-classification-with-bert">Example: Using Hugging Face Transformers for Text Classification with BERT</h4>
+<pre><code class="language-python">from transformers import pipeline
+
+classifier = pipeline(&#39;sentiment-analysis&#39;)
+result = classifier(&#39;I love using large language models!&#39;)
+
+print(result)
+</code></pre>
+								<h3 id="5-fine-tuning-an-llm">5. Fine-Tuning an LLM</h3>
+								<p>Fine-tuning involves training a pre-trained model on a specific dataset to specialize it for a particular task.</p>
+								<h4 id="example-fine-tuning-bert-for-text-classification">Example: Fine-Tuning BERT for Text Classification</h4>
+								<ol>
+									<li>
+										<p><strong>Prepare Dataset</strong>: Ensure your dataset is in a suitable format (e.g., CSV with text and label columns).</p>
+									</li>
+									<li>
+										<p><strong>Setup Training Script</strong>:</p>
+									</li>
+								</ol>
+<pre><code class="language-python">from transformers import BertForSequenceClassification, Trainer, TrainingArguments
+from datasets import load_dataset
+
+dataset = load_dataset(&#39;csv&#39;, data_files={&#39;train&#39;: &#39;train.csv&#39;, &#39;test&#39;: &#39;test.csv&#39;})
+
+model = BertForSequenceClassification.from_pretrained(&#39;bert-base-uncased&#39;)
+
+training_args = TrainingArguments(
+  output_dir=&#39;./results&#39;,
+  num_train_epochs=3,
+  per_device_train_batch_size=16,
+  per_device_eval_batch_size=64,
+  warmup_steps=500,
+  weight_decay=0.01,
+  logging_dir=&#39;./logs&#39;,
+  logging_steps=10,
+)
+
+trainer = Trainer(
+  model=model,
+  args=training_args,
+  train_dataset=dataset[&#39;train&#39;],
+  eval_dataset=dataset[&#39;test&#39;]
+)
+
+trainer.train()
+</code></pre>
+								<h3 id="6-building-applications-with-llms">6. Building Applications with LLMs</h3>
+								<h4 id="chatbot">Chatbot</h4>
+								<ol>
+									<li><strong>Integrate with a Web Framework</strong>: Use Flask or Django to create a web interface.</li>
+									<li><strong>Create Backend Logic</strong>: Use the LLM to process user inputs and generate responses.</li>
+								</ol>
+<pre><code class="language-python">from flask import Flask, request, jsonify
+import openai
+
+app = Flask(__name__)
+openai.api_key = &#39;YOUR_API_KEY&#39;
+
+@app.route(&#39;/chat&#39;, methods=[&#39;POST&#39;])
+def chat():
+    user_input = request.json[&#39;input&#39;]
+    response = openai.Completion.create(
+        model=&quot;text-davinci-003&quot;,
+        prompt=user_input,
+        max_tokens=150
+    )
+    return jsonify(response.choices[0].text.strip())
+
+if __name__ == &#39;__main__&#39;:
+    app.run(debug=True)
+</code></pre>
+								<h4 id="content-generation-tool">Content Generation Tool</h4>
+								<ol>
+									<li><strong>Setup User Interface</strong>: Create a web interface where users can input prompts.</li>
+									<li><strong>Generate Content</strong>: Use the LLM to generate articles, stories, or other content types.</li>
+								</ol>
+								<h3 id="7-deploying-the-application">7. Deploying the Application</h3>
+								<ol>
+									<li><strong>Containerization</strong>: Use Docker to containerize your application.</li>
+									<li><strong>Cloud Deployment</strong>: Deploy on cloud platforms like AWS, GCP, or Azure.</li>
+									<li><strong>Continuous Integration/Continuous Deployment (CI/CD)</strong>: Implement CI/CD pipelines to streamline updates and maintenance.</li>
+								</ol>
+								<h3 id="8-monitoring-and-maintenance">8. Monitoring and Maintenance</h3>
+								<ol>
+									<li><strong>Monitoring</strong>: Use tools to monitor the performance and usage of your LLM application.</li>
+									<li><strong>Feedback Loop</strong>: Collect user feedback to improve the model&#39;s performance and relevance.</li>
+									<li><strong>Regular Updates</strong>: Keep the model updated with new data and retrain periodically to maintain accuracy.</li>
+								</ol>
+								<h3 id="conclusion">Conclusion</h3>
+								<p>Using and building applications with LLMs involves selecting the right model, setting up the environment, fine-tuning the model if necessary, and integrating it into a user-facing application. Whether using open-source or closed-source models, the process requires a solid understanding of machine learning principles and software development practices. By following these steps, you can leverage the power of LLMs to create innovative and useful applications.</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>

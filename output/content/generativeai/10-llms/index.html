@@ -1,0 +1,3920 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	
+	<head id="ctl00_head1">
+<meta name="google-site-verification" content="RVceKokUCmE6I_4EjvyNso7r-FabKr95sjVmUSOiUAI" />
+<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JF94J1W5MC');
+</script><title>
+	LLM Overview Slides | LLM & RAG Guide
+</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" content="LLM 101 - This slide session walk thru LLM applications, architecture and building blocks. Slides describe open source vs closed LLM  and how to choose.  Slides also focus on LLM steerability.  Session slides also describe prompt engineering , tokenization  and factors to consider while building applications using LLM. At last it describe process architectur, component architecture and how to estimate cost of LLM." /><meta name="keywords" content="LLM 101, Large Language Model overview, slides for LLM, LLM applications, architecture, building blocks, Large Language model slides,open source vs closed LLM, LM steerability,   prompt engineering , tokenization  factors to consider while building applications using LLM, LLM process architectur, LLM component architecture, estimate cost of LLM
+" /><link rel="icon" href="https://storage.googleapis.com/json_articles/dataknobs-logo-2.jpg" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+
+<!--		
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery-1.8.3.min.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery.dropotron-1.2.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style-desktop.css" />
+		</noscript>
+	-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie7.css" /><![endif]-->
+
+
+	<script src="https://css.dataknobs.com/sites/site-6/dataknobs/js/jquery-1.8.3.min.js"></script>
+	<script src="https://css.dataknobs.com/sites/site-6/dataknobs/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+	<script src="https://css.dataknobs.com/sites/site-6/dataknobs/js/jquery.dropotron-1.2.js"></script>
+	<script src="https://css.dataknobs.com/sites/site-6/dataknobs/js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/5grid/core.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/style.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/dataknobs/css/style-desktop.css" />
+	</noscript>
+	
+	
+
+	</head>
+  
+	<body class="no-sidebar">
+         
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="5grid-layout">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<header id="header">
+								
+									<!-- Logo -->
+										
+										<div class="inner">
+										
+											<h1> <a id="ctl00_topheader" class="mobileUI-site-name">LLM Overview Slides | LLM & RAG Guide</a></h1>
+										
+									        
+										</div>
+									
+									
+									<!-- Nav -->
+										<nav id="nav" class="mobileUI-site-nav">
+											<ul>
+												 <li><a id="ctl00_hyperlinkHome" href="https://www.dataknobs.com/">Home</a></li>
+												<!--
+														
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.dataknobs.com/agent-ai/">Agent ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl07_title" href="https://www.dataknobs.com/customers/">Customers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl08_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl09_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl10_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl11_title" href="https://www.dataknobs.com/embeddings/">Embeddings</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl12_title" href="https://www.dataknobs.com/explore/">Explore</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl13_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl14_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl15_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl16_title" href="https://www.dataknobs.com/industry/">Industry</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl17_title" href="https://www.dataknobs.com/partnership/">Partnership</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl18_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl19_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl20_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl21_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl22_title" href="https://www.dataknobs.com/use-cases/">Use cases</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl23_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+												-->
+                                               
+											</ul>
+										</nav>
+								
+								</header>
+                               
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+
+		<div id="main-wrapper">
+
+			<div class="main-wrapper-style2">
+
+					<div class="inner">
+
+						<div class="5grid-layout">
+
+							<div class="row">
+
+									
+									<div class="12u mobileUI-main-content">
+										<div id="content">
+
+										<article>
+
+												
+													
+
+
+		
+							
+	
+	<header class="major">							
+                                       
+					  <h2><span id="ctl00_ContentPlaceHolder1_title">LLM Overview Slides | LLM & RAG Guide</span></h2>											
+						 <span class="byline"> <span id="ctl00_ContentPlaceHolder1_metadesc">LLM 101 - This slide session walk thru LLM applications, architecture and building blocks. Slides describe open source vs closed LLM  and how to choose.  Slides also focus on LLM steerability.  Session slides also describe prompt engineering , tokenization  and factors to consider while building applications using LLM. At last it describe process architectur, component architecture and how to estimate cost of LLM.</span></span>	
+    </header>
+		<table id="ctl00_ContentPlaceHolder1_RepDetails" cellspacing="0" border="0">
+	<tr>
+		<td>
+               </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_hyperlink1" href="agenda.html">AGENDA</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_imghyperlink" href="agenda.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_Image1" alt="AGENDA" NavigateUrl="agenda.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide1.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_hyperlink2" href="agenda.html">AGENDA</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_hyperlink1" href="llm-topics.html">LLM TOPICS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_imghyperlink" href="llm-topics.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_Image1" alt="LLM TOPICS" NavigateUrl="llm-topics.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide2.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_hyperlink2" href="llm-topics.html">LLM TOPICS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_hyperlink1" href="llm-overview.html">LLM OVERVIEW</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_imghyperlink" href="llm-overview.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_Image1" alt="LLM OVERVIEW" NavigateUrl="llm-overview.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide3.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_hyperlink2" href="llm-overview.html">LLM OVERVIEW</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_hyperlink1" href="applications-of-llm.html">APPLICATIONS OF LLM</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_imghyperlink" href="applications-of-llm.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_Image1" alt="APPLICATIONS OF LLM" NavigateUrl="applications-of-llm.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide4.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_hyperlink2" href="applications-of-llm.html">APPLICATIONS OF LLM</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_hyperlink1" href="nlp-applications.html">NLP APPLICATIONS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_imghyperlink" href="nlp-applications.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_Image1" alt="NLP APPLICATIONS" NavigateUrl="nlp-applications.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide5.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_hyperlink2" href="nlp-applications.html">NLP APPLICATIONS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_hyperlink1" href="software-applications.html">SOFTWARE APPLICATIONS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_imghyperlink" href="software-applications.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_Image1" alt="SOFTWARE APPLICATIONS" NavigateUrl="software-applications.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide6.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_hyperlink2" href="software-applications.html">SOFTWARE APPLICATIONS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_hyperlink1" href="evoloving-applications-of-llms.html">EVOLOVING APPLICATIONS OF LLMS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_imghyperlink" href="evoloving-applications-of-llms.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_Image1" alt="EVOLOVING APPLICATIONS OF LLMS" NavigateUrl="evoloving-applications-of-llms.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide7.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_hyperlink2" href="evoloving-applications-of-llms.html">EVOLOVING APPLICATIONS OF LLMS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_hyperlink1" href="open-source-vs-close.html">OPEN SOURCE VS CLOSE</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_imghyperlink" href="open-source-vs-close.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_Image1" alt="OPEN SOURCE VS CLOSE" NavigateUrl="open-source-vs-close.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide8.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_hyperlink2" href="open-source-vs-close.html">OPEN SOURCE VS CLOSE</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_hyperlink1" href="building-blocks-of-llms.html">BUILDING BLOCKS OF LLMS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_imghyperlink" href="building-blocks-of-llms.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_Image1" alt="BUILDING BLOCKS OF LLMS" NavigateUrl="building-blocks-of-llms.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide9.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_hyperlink2" href="building-blocks-of-llms.html">BUILDING BLOCKS OF LLMS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_hyperlink1" href="multi-model-llms.html">MULTI MODEL LLMS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_imghyperlink" href="multi-model-llms.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_Image1" alt="MULTI MODEL LLMS" NavigateUrl="multi-model-llms.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide10.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_hyperlink2" href="multi-model-llms.html">MULTI MODEL LLMS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_hyperlink1" href="common-terminology-llms.html">COMMON TERMINOLOGY LLMS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_imghyperlink" href="common-terminology-llms.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_Image1" alt="COMMON TERMINOLOGY LLMS" NavigateUrl="common-terminology-llms.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide11.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_hyperlink2" href="common-terminology-llms.html">COMMON TERMINOLOGY LLMS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_hyperlink1" href="ai-assistants-types.html">AI ASSISTANTS TYPES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_imghyperlink" href="ai-assistants-types.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_Image1" alt="AI ASSISTANTS TYPES" NavigateUrl="ai-assistants-types.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide12.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_hyperlink2" href="ai-assistants-types.html">AI ASSISTANTS TYPES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_hyperlink1" href="types-of-ai-assistants.html">TYPES OF AI ASSISTANTS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_imghyperlink" href="types-of-ai-assistants.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_Image1" alt="TYPES OF AI ASSISTANTS" NavigateUrl="types-of-ai-assistants.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide13.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_hyperlink2" href="types-of-ai-assistants.html">TYPES OF AI ASSISTANTS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_hyperlink1" href="features-of-ai-assistants.html">FEATURES OF AI ASSISTANTS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_imghyperlink" href="features-of-ai-assistants.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_Image1" alt="FEATURES OF AI ASSISTANTS" NavigateUrl="features-of-ai-assistants.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide14.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_hyperlink2" href="features-of-ai-assistants.html">FEATURES OF AI ASSISTANTS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_hyperlink1" href="example-features-of-ai-assista.html">EXAMPLE FEATURES OF AI ASSISTA</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_imghyperlink" href="example-features-of-ai-assista.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_Image1" alt="EXAMPLE FEATURES OF AI ASSISTA" NavigateUrl="example-features-of-ai-assista.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide15.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_hyperlink2" href="example-features-of-ai-assista.html">EXAMPLE FEATURES OF AI ASSISTA</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_hyperlink1" href="ai-assistant-evaluation-metric.html">AI ASSISTANT EVALUATION METRIC</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_imghyperlink" href="ai-assistant-evaluation-metric.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_Image1" alt="AI ASSISTANT EVALUATION METRIC" NavigateUrl="ai-assistant-evaluation-metric.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide16.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_hyperlink2" href="ai-assistant-evaluation-metric.html">AI ASSISTANT EVALUATION METRIC</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_hyperlink1" href="assistant-bot-metrics.html">ASSISTANT BOT METRICS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_imghyperlink" href="assistant-bot-metrics.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_Image1" alt="ASSISTANT BOT METRICS" NavigateUrl="assistant-bot-metrics.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide17.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_hyperlink2" href="assistant-bot-metrics.html">ASSISTANT BOT METRICS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_hyperlink1" href="metrics-to-evaluate-ai-assista.html">METRICS TO EVALUATE AI ASSISTA</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_imghyperlink" href="metrics-to-evaluate-ai-assista.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_Image1" alt="METRICS TO EVALUATE AI ASSISTA" NavigateUrl="metrics-to-evaluate-ai-assista.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide18.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_hyperlink2" href="metrics-to-evaluate-ai-assista.html">METRICS TO EVALUATE AI ASSISTA</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_hyperlink1" href="technical-metrics-ai-assistant.html">TECHNICAL METRICS AI ASSISTANT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_imghyperlink" href="technical-metrics-ai-assistant.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_Image1" alt="TECHNICAL METRICS AI ASSISTANT" NavigateUrl="technical-metrics-ai-assistant.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide19.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_hyperlink2" href="technical-metrics-ai-assistant.html">TECHNICAL METRICS AI ASSISTANT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_hyperlink1" href="metrics-for-search-bot.html">METRICS FOR SEARCH BOT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_imghyperlink" href="metrics-for-search-bot.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_Image1" alt="METRICS FOR SEARCH BOT" NavigateUrl="metrics-for-search-bot.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide20.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_hyperlink2" href="metrics-for-search-bot.html">METRICS FOR SEARCH BOT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_hyperlink1" href="metrics-for-recommendation-bot.html">METRICS FOR RECOMMENDATION BOT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_imghyperlink" href="metrics-for-recommendation-bot.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_Image1" alt="METRICS FOR RECOMMENDATION BOT" NavigateUrl="metrics-for-recommendation-bot.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide21.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_hyperlink2" href="metrics-for-recommendation-bot.html">METRICS FOR RECOMMENDATION BOT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_hyperlink1" href="behavioral-metrics-for-recomme.html">BEHAVIORAL METRICS FOR RECOMME</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_imghyperlink" href="behavioral-metrics-for-recomme.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_Image1" alt="BEHAVIORAL METRICS FOR RECOMME" NavigateUrl="behavioral-metrics-for-recomme.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide22.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_hyperlink2" href="behavioral-metrics-for-recomme.html">BEHAVIORAL METRICS FOR RECOMME</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_hyperlink1" href="criteria-to-compare-llms.html">CRITERIA TO COMPARE LLMS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_imghyperlink" href="criteria-to-compare-llms.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_Image1" alt="CRITERIA TO COMPARE LLMS" NavigateUrl="criteria-to-compare-llms.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide23.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_hyperlink2" href="criteria-to-compare-llms.html">CRITERIA TO COMPARE LLMS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_hyperlink1" href="llm-technology-slides.html">LLM TECHNOLOGY SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_imghyperlink" href="llm-technology-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_Image1" alt="LLM TECHNOLOGY SLIDES" NavigateUrl="llm-technology-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide24.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_hyperlink2" href="llm-technology-slides.html">LLM TECHNOLOGY SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_hyperlink1" href="ai-assistant-tech-stack.html">AI ASSISTANT TECH STACK</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_imghyperlink" href="ai-assistant-tech-stack.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_Image1" alt="AI ASSISTANT TECH STACK" NavigateUrl="ai-assistant-tech-stack.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide25.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_hyperlink2" href="ai-assistant-tech-stack.html">AI ASSISTANT TECH STACK</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_hyperlink1" href="ai-assistant-architecture.html">AI ASSISTANT ARCHITECTURE</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_imghyperlink" href="ai-assistant-architecture.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_Image1" alt="AI ASSISTANT ARCHITECTURE" NavigateUrl="ai-assistant-architecture.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide26.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_hyperlink2" href="ai-assistant-architecture.html">AI ASSISTANT ARCHITECTURE</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_hyperlink1" href="consideraions-for-bot-architec.html">CONSIDERAIONS FOR BOT ARCHITEC</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_imghyperlink" href="consideraions-for-bot-architec.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_Image1" alt="CONSIDERAIONS FOR BOT ARCHITEC" NavigateUrl="consideraions-for-bot-architec.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide27.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_hyperlink2" href="consideraions-for-bot-architec.html">CONSIDERAIONS FOR BOT ARCHITEC</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_hyperlink1" href="rag-slides.html">RAG SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_imghyperlink" href="rag-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_Image1" alt="RAG SLIDES" NavigateUrl="rag-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide28.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_hyperlink2" href="rag-slides.html">RAG SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_hyperlink1" href="when-to-use-rag.html">WHEN TO USE RAG</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_imghyperlink" href="when-to-use-rag.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_Image1" alt="WHEN TO USE RAG" NavigateUrl="when-to-use-rag.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide29.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_hyperlink2" href="when-to-use-rag.html">WHEN TO USE RAG</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_hyperlink1" href="when-not-to-use-rag.html">WHEN NOT TO USE RAG</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_imghyperlink" href="when-not-to-use-rag.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_Image1" alt="WHEN NOT TO USE RAG" NavigateUrl="when-not-to-use-rag.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide30.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_hyperlink2" href="when-not-to-use-rag.html">WHEN NOT TO USE RAG</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_hyperlink1" href="ai-assistant-wrapper.html">AI ASSISTANT WRAPPER</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_imghyperlink" href="ai-assistant-wrapper.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_Image1" alt="AI ASSISTANT WRAPPER" NavigateUrl="ai-assistant-wrapper.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide31.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_hyperlink2" href="ai-assistant-wrapper.html">AI ASSISTANT WRAPPER</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl32_hyperlink1" href="ai-assistant-on-your-data.html">AI ASSISTANT ON YOUR DATA</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl32_imghyperlink" href="ai-assistant-on-your-data.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl32_Image1" alt="AI ASSISTANT ON YOUR DATA" NavigateUrl="ai-assistant-on-your-data.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide32.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl32_hyperlink2" href="ai-assistant-on-your-data.html">AI ASSISTANT ON YOUR DATA</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl33_hyperlink1" href="ai-assistant-finetune-model.html">AI ASSISTANT FINETUNE MODEL</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl33_imghyperlink" href="ai-assistant-finetune-model.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl33_Image1" alt="AI ASSISTANT FINETUNE MODEL" NavigateUrl="ai-assistant-finetune-model.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide33.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl33_hyperlink2" href="ai-assistant-finetune-model.html">AI ASSISTANT FINETUNE MODEL</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl34_hyperlink1" href="ai-assistant-custom-model.html">AI ASSISTANT CUSTOM MODEL</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl34_imghyperlink" href="ai-assistant-custom-model.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl34_Image1" alt="AI ASSISTANT CUSTOM MODEL" NavigateUrl="ai-assistant-custom-model.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide34.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl34_hyperlink2" href="ai-assistant-custom-model.html">AI ASSISTANT CUSTOM MODEL</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl35_hyperlink1" href="ai-assistant-building-blocks.html">AI ASSISTANT BUILDING BLOCKS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl35_imghyperlink" href="ai-assistant-building-blocks.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl35_Image1" alt="AI ASSISTANT BUILDING BLOCKS" NavigateUrl="ai-assistant-building-blocks.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide35.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl35_hyperlink2" href="ai-assistant-building-blocks.html">AI ASSISTANT BUILDING BLOCKS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl36_hyperlink1" href="llm-function-calling.html">LLM FUNCTION CALLING</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl36_imghyperlink" href="llm-function-calling.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl36_Image1" alt="LLM FUNCTION CALLING" NavigateUrl="llm-function-calling.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide36.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl36_hyperlink2" href="llm-function-calling.html">LLM FUNCTION CALLING</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl37_hyperlink1" href="rag-overview-slides.html">RAG OVERVIEW SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl37_imghyperlink" href="rag-overview-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl37_Image1" alt="RAG OVERVIEW SLIDES" NavigateUrl="rag-overview-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide37.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl37_hyperlink2" href="rag-overview-slides.html">RAG OVERVIEW SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl38_hyperlink1" href="rag-architecture-slide.html">RAG ARCHITECTURE SLIDE</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl38_imghyperlink" href="rag-architecture-slide.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl38_Image1" alt="RAG ARCHITECTURE SLIDE" NavigateUrl="rag-architecture-slide.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide38.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl38_hyperlink2" href="rag-architecture-slide.html">RAG ARCHITECTURE SLIDE</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl39_hyperlink1" href="rag-retriever-options.html">RAG RETRIEVER OPTIONS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl39_imghyperlink" href="rag-retriever-options.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl39_Image1" alt="RAG RETRIEVER OPTIONS" NavigateUrl="rag-retriever-options.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide39.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl39_hyperlink2" href="rag-retriever-options.html">RAG RETRIEVER OPTIONS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl40_hyperlink1" href="rag-node-processor.html">RAG NODE PROCESSOR</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl40_imghyperlink" href="rag-node-processor.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl40_Image1" alt="RAG NODE PROCESSOR" NavigateUrl="rag-node-processor.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide40.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl40_hyperlink2" href="rag-node-processor.html">RAG NODE PROCESSOR</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl41_hyperlink1" href="rag-node-post-processor.html">RAG NODE POST PROCESSOR</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl41_imghyperlink" href="rag-node-post-processor.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl41_Image1" alt="RAG NODE POST PROCESSOR" NavigateUrl="rag-node-post-processor.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide41.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl41_hyperlink2" href="rag-node-post-processor.html">RAG NODE POST PROCESSOR</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl42_hyperlink1" href="How%20to%20Form%20response%20in%20AI%20Ass.html">HOW TO FORM RESPONSE IN AI ASS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl42_imghyperlink" href="How%20to%20Form%20response%20in%20AI%20Ass.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl42_Image1" alt="HOW TO FORM RESPONSE IN AI ASS" NavigateUrl="How to Form response in AI Ass.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide42.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl42_hyperlink2" href="How%20to%20Form%20response%20in%20AI%20Ass.html">HOW TO FORM RESPONSE IN AI ASS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl43_hyperlink1" href="llm-architectue-for-bot.html">LLM ARCHITECTUE FOR BOT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl43_imghyperlink" href="llm-architectue-for-bot.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl43_Image1" alt="LLM ARCHITECTUE FOR BOT" NavigateUrl="llm-architectue-for-bot.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide43.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl43_hyperlink2" href="llm-architectue-for-bot.html">LLM ARCHITECTUE FOR BOT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl44_hyperlink1" href="llm-concerns-slides.html">LLM CONCERNS SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl44_imghyperlink" href="llm-concerns-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl44_Image1" alt="LLM CONCERNS SLIDES" NavigateUrl="llm-concerns-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide44.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl44_hyperlink2" href="llm-concerns-slides.html">LLM CONCERNS SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl45_hyperlink1" href="llm-threats-slides.html">LLM THREATS SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl45_imghyperlink" href="llm-threats-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl45_Image1" alt="LLM THREATS SLIDES" NavigateUrl="llm-threats-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide45.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl45_hyperlink2" href="llm-threats-slides.html">LLM THREATS SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl46_hyperlink1" href="llm-challenges-slide.html">LLM CHALLENGES SLIDE</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl46_imghyperlink" href="llm-challenges-slide.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl46_Image1" alt="LLM CHALLENGES SLIDE" NavigateUrl="llm-challenges-slide.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide46.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl46_hyperlink2" href="llm-challenges-slide.html">LLM CHALLENGES SLIDE</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl47_hyperlink1" href="llm-ethical-concerns-slides.html">LLM ETHICAL CONCERNS SLIDES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl47_imghyperlink" href="llm-ethical-concerns-slides.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl47_Image1" alt="LLM ETHICAL CONCERNS SLIDES" NavigateUrl="llm-ethical-concerns-slides.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide47.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl47_hyperlink2" href="llm-ethical-concerns-slides.html">LLM ETHICAL CONCERNS SLIDES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl48_hyperlink1" href="llm-uncontrolled-behavior-slid.html">LLM UNCONTROLLED BEHAVIOR SLID</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl48_imghyperlink" href="llm-uncontrolled-behavior-slid.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl48_Image1" alt="LLM UNCONTROLLED BEHAVIOR SLID" NavigateUrl="llm-uncontrolled-behavior-slid.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide48.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl48_hyperlink2" href="llm-uncontrolled-behavior-slid.html">LLM UNCONTROLLED BEHAVIOR SLID</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl49_hyperlink1" href="lllm-ethical-issues.html">LLLM ETHICAL ISSUES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl49_imghyperlink" href="lllm-ethical-issues.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl49_Image1" alt="LLLM ETHICAL ISSUES" NavigateUrl="lllm-ethical-issues.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide49.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl49_hyperlink2" href="lllm-ethical-issues.html">LLLM ETHICAL ISSUES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl50_hyperlink1" href="data-ownership-issues-llm.html">DATA OWNERSHIP ISSUES LLM</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl50_imghyperlink" href="data-ownership-issues-llm.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl50_Image1" alt="DATA OWNERSHIP ISSUES LLM" NavigateUrl="data-ownership-issues-llm.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide50.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl50_hyperlink2" href="data-ownership-issues-llm.html">DATA OWNERSHIP ISSUES LLM</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl51_hyperlink1" href="llm-generated-output-issues.html">LLM GENERATED OUTPUT ISSUES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl51_imghyperlink" href="llm-generated-output-issues.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl51_Image1" alt="LLM GENERATED OUTPUT ISSUES" NavigateUrl="llm-generated-output-issues.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide51.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl51_hyperlink2" href="llm-generated-output-issues.html">LLM GENERATED OUTPUT ISSUES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl52_hyperlink1" href="llm-environment-issues.html">LLM ENVIRONMENT ISSUES</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl52_imghyperlink" href="llm-environment-issues.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl52_Image1" alt="LLM ENVIRONMENT ISSUES" NavigateUrl="llm-environment-issues.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide52.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl52_hyperlink2" href="llm-environment-issues.html">LLM ENVIRONMENT ISSUES</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl53_hyperlink1" href="enterprise-grade-answers-ai-as.html">ENTERPRISE GRADE ANSWERS AI AS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl53_imghyperlink" href="enterprise-grade-answers-ai-as.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl53_Image1" alt="ENTERPRISE GRADE ANSWERS AI AS" NavigateUrl="enterprise-grade-answers-ai-as.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide53.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl53_hyperlink2" href="enterprise-grade-answers-ai-as.html">ENTERPRISE GRADE ANSWERS AI AS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl54_hyperlink1" href="approaches-to-verify-ai-assist.html">APPROACHES TO VERIFY AI ASSIST</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl54_imghyperlink" href="approaches-to-verify-ai-assist.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl54_Image1" alt="APPROACHES TO VERIFY AI ASSIST" NavigateUrl="approaches-to-verify-ai-assist.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide54.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl54_hyperlink2" href="approaches-to-verify-ai-assist.html">APPROACHES TO VERIFY AI ASSIST</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl55_hyperlink1" href="example-bot-assistants.html">EXAMPLE BOT ASSISTANTS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl55_imghyperlink" href="example-bot-assistants.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl55_Image1" alt="EXAMPLE BOT ASSISTANTS" NavigateUrl="example-bot-assistants.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide55.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl55_hyperlink2" href="example-bot-assistants.html">EXAMPLE BOT ASSISTANTS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl56_hyperlink1" href="customer-onboarding-bot.html">CUSTOMER ONBOARDING BOT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl56_imghyperlink" href="customer-onboarding-bot.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl56_Image1" alt="CUSTOMER ONBOARDING BOT" NavigateUrl="customer-onboarding-bot.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide56.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl56_hyperlink2" href="customer-onboarding-bot.html">CUSTOMER ONBOARDING BOT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl57_hyperlink1" href="customer-onboarding-ai-assisat.html">CUSTOMER ONBOARDING AI ASSISAT</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl57_imghyperlink" href="customer-onboarding-ai-assisat.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl57_Image1" alt="CUSTOMER ONBOARDING AI ASSISAT" NavigateUrl="customer-onboarding-ai-assisat.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide57.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl57_hyperlink2" href="customer-onboarding-ai-assisat.html">CUSTOMER ONBOARDING AI ASSISAT</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl58_hyperlink1" href="architecture-slide-for-custome.html">ARCHITECTURE SLIDE FOR CUSTOME</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl58_imghyperlink" href="architecture-slide-for-custome.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl58_Image1" alt="ARCHITECTURE SLIDE FOR CUSTOME" NavigateUrl="architecture-slide-for-custome.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide58.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl58_hyperlink2" href="architecture-slide-for-custome.html">ARCHITECTURE SLIDE FOR CUSTOME</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl59_hyperlink1" href="Slide59.html">SLIDE59</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl59_imghyperlink" href="Slide59.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl59_Image1" alt="SLIDE59" NavigateUrl="Slide59.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide59.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl59_hyperlink2" href="Slide59.html">SLIDE59</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl60_hyperlink1" href="llm-training-steps.html">LLM TRAINING STEPS</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl60_imghyperlink" href="llm-training-steps.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl60_Image1" alt="LLM TRAINING STEPS" NavigateUrl="llm-training-steps.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide60.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl60_hyperlink2" href="llm-training-steps.html">LLM TRAINING STEPS</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl61_hyperlink1" href="architecture-llm-training.html">ARCHITECTURE LLM TRAINING</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl61_imghyperlink" href="architecture-llm-training.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl61_Image1" alt="ARCHITECTURE LLM TRAINING" NavigateUrl="architecture-llm-training.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide61.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl61_hyperlink2" href="architecture-llm-training.html">ARCHITECTURE LLM TRAINING</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl62_hyperlink1" href="Slide62.html">SLIDE62</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl62_imghyperlink" href="Slide62.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl62_Image1" alt="SLIDE62" NavigateUrl="Slide62.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide62.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl62_hyperlink2" href="Slide62.html">SLIDE62</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl63_hyperlink1" href="Slide63.html">SLIDE63</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl63_imghyperlink" href="Slide63.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl63_Image1" alt="SLIDE63" NavigateUrl="Slide63.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide63.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl63_hyperlink2" href="Slide63.html">SLIDE63</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl64_hyperlink1" href="Slide64.html">SLIDE64</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl64_imghyperlink" href="Slide64.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl64_Image1" alt="SLIDE64" NavigateUrl="Slide64.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide64.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl64_hyperlink2" href="Slide64.html">SLIDE64</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl65_hyperlink1" href="Slide65.html">SLIDE65</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl65_imghyperlink" href="Slide65.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl65_Image1" alt="SLIDE65" NavigateUrl="Slide65.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide65.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl65_hyperlink2" href="Slide65.html">SLIDE65</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl66_hyperlink1" href="Slide66.html">SLIDE66</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl66_imghyperlink" href="Slide66.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl66_Image1" alt="SLIDE66" NavigateUrl="Slide66.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide66.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl66_hyperlink2" href="Slide66.html">SLIDE66</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl67_hyperlink1" href="Slide67.html">SLIDE67</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl67_imghyperlink" href="Slide67.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl67_Image1" alt="SLIDE67" NavigateUrl="Slide67.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide67.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl67_hyperlink2" href="Slide67.html">SLIDE67</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl68_hyperlink1" href="Slide68.html">SLIDE68</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl68_imghyperlink" href="Slide68.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl68_Image1" alt="SLIDE68" NavigateUrl="Slide68.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide68.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl68_hyperlink2" href="Slide68.html">SLIDE68</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl69_hyperlink1" href="Slide69.html">SLIDE69</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl69_imghyperlink" href="Slide69.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl69_Image1" alt="SLIDE69" NavigateUrl="Slide69.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide69.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl69_hyperlink2" href="Slide69.html">SLIDE69</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl70_hyperlink1" href="Slide70.html">SLIDE70</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl70_imghyperlink" href="Slide70.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl70_Image1" alt="SLIDE70" NavigateUrl="Slide70.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide70.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl70_hyperlink2" href="Slide70.html">SLIDE70</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl71_hyperlink1" href="Slide71.html">SLIDE71</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl71_imghyperlink" href="Slide71.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl71_Image1" alt="SLIDE71" NavigateUrl="Slide71.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide71.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl71_hyperlink2" href="Slide71.html">SLIDE71</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl72_hyperlink1" href="Slide72.html">SLIDE72</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl72_imghyperlink" href="Slide72.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl72_Image1" alt="SLIDE72" NavigateUrl="Slide72.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide72.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl72_hyperlink2" href="Slide72.html">SLIDE72</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl73_hyperlink1" href="Slide73.html">SLIDE73</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl73_imghyperlink" href="Slide73.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl73_Image1" alt="SLIDE73" NavigateUrl="Slide73.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide73.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl73_hyperlink2" href="Slide73.html">SLIDE73</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl74_hyperlink1" href="Slide74.html">SLIDE74</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl74_imghyperlink" href="Slide74.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl74_Image1" alt="SLIDE74" NavigateUrl="Slide74.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide74.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl74_hyperlink2" href="Slide74.html">SLIDE74</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl75_hyperlink1" href="Slide75.html">SLIDE75</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl75_imghyperlink" href="Slide75.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl75_Image1" alt="SLIDE75" NavigateUrl="Slide75.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide75.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl75_hyperlink2" href="Slide75.html">SLIDE75</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl76_hyperlink1" href="Slide76.html">SLIDE76</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl76_imghyperlink" href="Slide76.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl76_Image1" alt="SLIDE76" NavigateUrl="Slide76.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide76.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl76_hyperlink2" href="Slide76.html">SLIDE76</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl77_hyperlink1" href="Slide77.html">SLIDE77</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl77_imghyperlink" href="Slide77.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl77_Image1" alt="SLIDE77" NavigateUrl="Slide77.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide77.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl77_hyperlink2" href="Slide77.html">SLIDE77</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl78_hyperlink1" href="Slide78.html">SLIDE78</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl78_imghyperlink" href="Slide78.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl78_Image1" alt="SLIDE78" NavigateUrl="Slide78.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide78.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl78_hyperlink2" href="Slide78.html">SLIDE78</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl79_hyperlink1" href="Slide79.html">SLIDE79</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl79_imghyperlink" href="Slide79.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl79_Image1" alt="SLIDE79" NavigateUrl="Slide79.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide79.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl79_hyperlink2" href="Slide79.html">SLIDE79</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl80_hyperlink1" href="Slide80.html">SLIDE80</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl80_imghyperlink" href="Slide80.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl80_Image1" alt="SLIDE80" NavigateUrl="Slide80.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide80.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl80_hyperlink2" href="Slide80.html">SLIDE80</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl81_hyperlink1" href="Slide81.html">SLIDE81</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl81_imghyperlink" href="Slide81.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl81_Image1" alt="SLIDE81" NavigateUrl="Slide81.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide81.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl81_hyperlink2" href="Slide81.html">SLIDE81</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl82_hyperlink1" href="Slide82.html">SLIDE82</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl82_imghyperlink" href="Slide82.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl82_Image1" alt="SLIDE82" NavigateUrl="Slide82.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide82.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl82_hyperlink2" href="Slide82.html">SLIDE82</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl83_hyperlink1" href="Slide83.html">SLIDE83</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl83_imghyperlink" href="Slide83.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl83_Image1" alt="SLIDE83" NavigateUrl="Slide83.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide83.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl83_hyperlink2" href="Slide83.html">SLIDE83</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl84_hyperlink1" href="Slide84.html">SLIDE84</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl84_imghyperlink" href="Slide84.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl84_Image1" alt="SLIDE84" NavigateUrl="Slide84.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide84.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl84_hyperlink2" href="Slide84.html">SLIDE84</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl85_hyperlink1" href="Slide85.html">SLIDE85</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl85_imghyperlink" href="Slide85.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl85_Image1" alt="SLIDE85" NavigateUrl="Slide85.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide85.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl85_hyperlink2" href="Slide85.html">SLIDE85</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl86_hyperlink1" href="Slide86.html">SLIDE86</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl86_imghyperlink" href="Slide86.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl86_Image1" alt="SLIDE86" NavigateUrl="Slide86.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide86.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl86_hyperlink2" href="Slide86.html">SLIDE86</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl87_hyperlink1" href="Slide87.html">SLIDE87</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl87_imghyperlink" href="Slide87.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl87_Image1" alt="SLIDE87" NavigateUrl="Slide87.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide87.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl87_hyperlink2" href="Slide87.html">SLIDE87</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl88_hyperlink1" href="Slide88.html">SLIDE88</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl88_imghyperlink" href="Slide88.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl88_Image1" alt="SLIDE88" NavigateUrl="Slide88.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide88.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl88_hyperlink2" href="Slide88.html">SLIDE88</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl89_hyperlink1" href="Slide89.html">SLIDE89</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl89_imghyperlink" href="Slide89.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl89_Image1" alt="SLIDE89" NavigateUrl="Slide89.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide89.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl89_hyperlink2" href="Slide89.html">SLIDE89</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl90_hyperlink1" href="Slide90.html">SLIDE90</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl90_imghyperlink" href="Slide90.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl90_Image1" alt="SLIDE90" NavigateUrl="Slide90.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide90.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl90_hyperlink2" href="Slide90.html">SLIDE90</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl91_hyperlink1" href="Slide91.html">SLIDE91</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl91_imghyperlink" href="Slide91.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl91_Image1" alt="SLIDE91" NavigateUrl="Slide91.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide91.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl91_hyperlink2" href="Slide91.html">SLIDE91</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl92_hyperlink1" href="Slide92.html">SLIDE92</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl92_imghyperlink" href="Slide92.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl92_Image1" alt="SLIDE92" NavigateUrl="Slide92.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide92.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl92_hyperlink2" href="Slide92.html">SLIDE92</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl93_hyperlink1" href="Slide93.html">SLIDE93</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl93_imghyperlink" href="Slide93.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl93_Image1" alt="SLIDE93" NavigateUrl="Slide93.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide93.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl93_hyperlink2" href="Slide93.html">SLIDE93</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl94_hyperlink1" href="Slide94.html">SLIDE94</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl94_imghyperlink" href="Slide94.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl94_Image1" alt="SLIDE94" NavigateUrl="Slide94.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide94.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl94_hyperlink2" href="Slide94.html">SLIDE94</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+
+                                    <section>
+                                          <header>
+                                              <h3> <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl95_hyperlink1" href="Slide95.html">SLIDE95</a></h3>
+                                          </header>
+                            
+                                          <span class="image image-full">                          
+                                                <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl95_imghyperlink" href="Slide95.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl95_Image1" alt="SLIDE95" NavigateUrl="Slide95.html" src="https://storage.googleapis.com/generate-slides/llm-slides/images/Slide1000/Slide95.png" border="0" /></a>
+                                             </span>
+
+                                          												 
+				
+                                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         -->       	
+                                        
+                                         <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl95_hyperlink2" href="Slide95.html">SLIDE95</a></blockquote>
+		
+                                          
+                                       </section>
+                                
+
+                                </td>
+	</tr><tr>
+		<td>
+               
+              </td>
+	</tr>
+</table>
+
+                               
+										
+									<span id="ctl00_ContentPlaceHolder1_labeltext"><br/>
+<br/><h1>Large Language Models (LLMs)</h1>
+<br/>LLMs are a type of artificial intelligence (AI) capable of processing and generating human-like text in response to a wide range of prompts and questions. Trained on massive datasets of text and code, they can perform various tasks such as:
+<br/>
+<br/>Generating different creative text formats: poems, code, scripts, musical pieces, emails, letters, etc.
+<br/>Answering open ended, challenging, or strange questions in an informative way: drawing on their internal knowledge and understanding of the world.
+<br/>Translating languages: seamlessly converting text from one language to another.
+<br/>Writing different kinds of creative content: stories, poems, scripts, musical pieces, etc., often indistinguishable from human-written content.
+<br/>
+<br/>
+<h2>Retrieval Augmented Generation (RAG)</h2>
+<br/>RAG is a novel approach that combines the strengths of LLMs with external knowledge sources. It works by:
+<br/>
+<br/>Retrieval: When given a prompt, RAG searches through an external database of relevant documents to find information related to the query.
+<br/>Augmentation: The retrieved information is then used to enrich the context provided to the LLM. This can be done by incorporating facts, examples, or arguments into the prompt.
+<br/>Generation: Finally, the LLM uses the enhanced context to generate a response that is grounded in factual information and tailored to the specific query.
+<br/>RAG offers several advantages over traditional LLM approaches:
+<br/>
+<br/>Improved factual accuracy: By anchoring responses in real-world data, RAG reduces the risk of generating false or misleading information.
+<br/>Greater adaptability: As external knowledge sources are updated, RAG can access the latest information, making it more adaptable to changing circumstances.
+<br/>Transparency: RAG facilitates a clear understanding of the sources used to generate responses, fostering trust and accountability.
+<br/>However, RAG also has its challenges:
+<br/>
+<br/>Data quality: The accuracy and relevance of RAG's outputs depend heavily on the quality of the external knowledge sources.
+<br/>Retrieval efficiency: Finding the most relevant information from a large database can be computationally expensive.
+<br/>Integration complexity: Combining two different systems (retrieval and generation) introduces additional complexity in terms of design and implementation.
+<br/>
+<br/>
+<h2>Prompt Engineering</h2>
+<br/>Prompt engineering is a crucial technique for guiding LLMs towards generating desired outputs. It involves crafting prompts that:
+<br/>
+<br/>Clearly define the task: Specify what the LLM should do with the provided information.
+<br/>Provide context: Give the LLM enough background knowledge to understand the prompt and generate an appropriate response.
+<br/>Use appropriate language: Frame the prompt in a way that aligns with the LLM's capabilities and training data.
+<br/>
+<br/>
+</span>	
+
+                                                           														
+                            <br />
+                            <br />
+
+                               <table id="ctl00_ContentPlaceHolder1_RepComments" cellspacing="0" border="0">
+	<tr>
+		<td>
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl01_label2"><font color="Black" size="4"><h2>Advantage of using RAG</h2>
+<br/>Better Accuracy: If factual correctness is crucial, RAG can be fantastic. It retrieves information from external sources, allowing the AI assistant to double-check its responses and provide well-sourced answers.
+<br/>Domain Knowledge: Imagine an AI assistant for medical diagnosis or legal or up to date tax laws. RAG can access medical databases to enhance its responses and ensure they align with established medical knowledge.
+<br/>Reduce Hallucination: LLMs can sometimes fabricate information, a phenomenon called hallucination in which they make up things. RAG mitigates this risk by grounding the response in retrieved data.
+<br/>Building Trust: By citing sources, RAG fosters trust with users. Users can verify the information and see the reasoning behind the response.
+<h2>Disadvantages of using RAG</h2>
+<br/>Speed is Crucial: RAG involves retrieving information, which can add a slight delay to the response. If real-time response is essential, a pre-trained LLM might be sufficient.
+<br/>Limited Context: RAG works best when the user's query and context are clear. If the conversation is ambiguous, retrieved information might not be relevant.
+<br/>Privacy Concerns: If the AI assistant deals with sensitive user data, RAG might raise privacy concerns. External retrievals could potentially expose user information.</font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl02_label2"><font color="Black" size="4"><br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl03_label2"><font color="Black" size="4"><h2> When to finetune LLM </h2></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl04_label2"><font color="Black" size="4">Consider fine-tuning a large language model (LLM) when you want it to perform better at a specific task or adapt to a particular domain. Here are exampple scenarios where fine-tuning is optimal
+<br/>
+<br/>Domain-Specific Nuances:  If you need an LLM for financial analysis, legal document or on medical document - finething is better.  Example word capital has meaning in finance domain.   While a pre-trained LLM might understand language, it won't grasp legal, finance or medical specific terms or jargons. Fine-tuning on finance Q&A, document or legal documents will imrpove the LLM to that specific domain.
+<br/>
+<br/>Instruction Fine-Tuning: This is a recent advancement where you provide the LLM with instructions or demonstrations alongside training data. This can be useful for tasks where you want the LLM to follow a certain style or format, like writing safety instructions in a specific tone.
+<br/>
+<br/>Specialized Tasks:  Imagine you want an LLM to write different kinds of creative content, like poems or code. Fine-tuning on a dataset of poems can improve its poetry generation skills, while fine-tuning on code samples can enhance its code writing abilities.
+<br/>
+<br/>However, fine-tuning isn't always the right answer. Here are examples when you should not do fine tuning. In fact you should first use standard LLM, prompt engineering.  Then try RAG.  Later consider fine tuning.
+<br/>
+<br/>General Use Cases: If you need a broad LLM for various tasks, a pre-trained model will do better job. Pre-trained models are versatile, trained on diverse data and can handle many tasks well enough without specific fine-tuning.
+<br/>
+<br/>Limited Data: Fine-tuning works well when you have lot of data related to your specific task or domain. If you only add few records which most demo shows - fine-tuning might not be effective and could even harm the model's performance.
+<br/>
+<br/>Knowledge Integration: If your goal is to add propietary/latest/specific knowledge to the LLM, retrieval-augmented-generation (RAG)is better approach. In RAG LLM retrieves relevant information from a knowledge base. You can use out of box RAG.  You can further optimize it by smmarizing knowledge,, creating embeddings with meta data etc.</font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl05_label2"><font color="Black" size="4"><br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl06_label2"><font color="Black" size="4"><h4>Fine Tuning Steps</h4></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl07_label2"><font color="Black" size="4"><br/>How can LLMs be fine-tuned for summarization?
+<br/>LLMs (Large Language Models) like GPT-3 can be fine-tuned for summarization using the following approaches:
+<br/><b>Supervised training</b> - The simplest approach is to fine-tune the LLM using a large dataset of text-summary pairs. The model is trained to generate the corresponding summary given the input text.
+<br/>This requires a sizable supervised dataset, which can be expensive to create. Public datasets like CNN/DailyMail can be used.
+<br/>
+<br/>Self-supervised training - The LLM is trained using the original text as input and the first few sentences as the "summary". This creates weak supervision from the data itself.
+<br/>The model is then fine-tuned on a smaller set of human-written summaries to improve accuracy. This approach requires less labeled data.
+<br/>
+<br/>Reinforcement learning - The LLM is first trained autoencoding - to reproduce the input text. Then, rewards are given based on the quality and conciseness of the generated summary.
+<br/>The model learns to generate better summaries through trial-and-error to maximize these rewards. However, this requires defining a good reward function.
+<br/>
+<br/>Filtering and post-processing - Generated summaries from the LLM can be filtered and refined using techniques like:
+<br/>• Extracting sentences with the highest similarity to human references• Removing repetitive sentences• Combining overlapping content into a single sentence, etc.
+<br/>This requires minimal fine-tuning of the base LLM but provides less control over the summary style.
+<br/>
+<br/>Prompting - The LLM can be "prompted" to generate a summary using natural language instructions. For example:
+<br/>In 2-3 short paragraphs, summarize the main points of the following text:
+<br/>This relies more on the pre-trained LLM abilities and requires less labeled data. But accuracy tends to be lower.
+<br/>So in short, there are a variety of approaches to fine-tune LLMs for summarization - from fully supervised to minimally supervised. The choice depends on the available data, required accuracy and custom need.
+<br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl08_label2"><font color="Black" size="4"><br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl09_label2"><font color="Black" size="4"><h2>Verify LLM and AI Assistant Answers</li></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl10_label2"><font color="Black" size="4">If you are using AI Assistant, you should cross check facts/number given by AI Assistant 
+<br/>
+<br/>Check in Vecor DB:  If you are using Vector DB/RAG, you can check what value RAG provide. This will help to ensure that response generated by RAG is in line with value stored in vector DB.
+<br/>Use Second LLM: Other/aditional approach is you can ask a smaller question from second or same LLM and se what answer you get e.g. if there is 1 page of text and it says company Dataknobs has revenue of $78M, you can ask a smaller question "how much revneue Dataknobs has".  However you need to consider additional cost of 2nd call? You may have more than one fact and multiple calls may be needed for each fact.
+<br/>Call to Search Engine: You can run a query on search engine programmatically and chec response.  However depending on domain this result may or may not work. It may require parsing result from search engine.  
+</font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl11_label2"><font color="Black" size="4"><br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl12_label2"><font color="Black" size="4"><br/></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl13_label2"><font color="Black" size="4"><h2>How to evaluate LLM </h2></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl14_label2"><font color="Black" size="4"><div>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Perplexity</td>
+            <td>Perplexity measures how well a language model predicts a sample of text. Lower perplexity indicates better performance.</td>
+        </tr>
+        <tr>
+            <td>BLEU Score</td>
+            <td>BLEU (Bilingual Evaluation Understudy) Score is commonly used to evaluate the quality of machine-translated text by comparing it to human-generated translations.</td>
+        </tr>
+        <tr>
+            <td>ROUGE Score</td>
+            <td>ROUGE (Recall-Oriented Understudy for Gisting Evaluation) Score is used to evaluate the quality of summaries produced by a language model by comparing them to reference summaries.</td>
+        </tr>
+        <tr>
+            <td>Human Evaluation</td>
+            <td>Human evaluation involves having human judges assess the quality of text generated by the language model based on criteria such as fluency, coherence, and relevance.</td>
+        </tr>
+        <tr>
+            <td>Word Error Rate (WER)</td>
+            <td>WER measures the difference between the words generated by the language model and the reference text. Lower WER indicates better performance.</td>
+        </tr>
+    </table>
+</div></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+					
+                   
+
+												 
+               							
+		
+
+      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl15_label2"><font color="Black" size="4"><br></font></span>
+    <br />
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+
+</td>
+	</tr>
+</table>    
+                            <br />
+                            <br />
+                             <div class="fb-activity" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+	
+								
+                                <div class="fb-comments" data-href="https://www.dataknobs.com/" data-numposts="5" data-colorscheme="light" data-order-by="reverse_time"></div>
+			
+<!--
+                            <div class="fb-post" data-href="https://www.facebook.com/DiwaliCelebrations" data-width="500"></div>		
+                              <div class="fb-recommendations" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+		
+                            -->
+     
+
+    
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl01_title" href="https://www.dataknobs.com/generativeai/10-llms/100K-tokens.html">100K-tokens</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl02_title" href="https://www.dataknobs.com/generativeai/10-llms/agenda.html">Agenda</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl03_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-architecture.html">Ai-assistant-architecture</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl04_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-building-blocks.html">Ai-assistant-building-blocks</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl05_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-custom-model.html">Ai-assistant-custom-model</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl06_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-evaluation-metric.html">Ai-assistant-evaluation-metric</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl07_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-finetune-model.html">Ai-assistant-finetune-model</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl08_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-on-your-data.html">Ai-assistant-on-your-data</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl09_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-tech-stack.html">Ai-assistant-tech-stack</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+												
+									
+		<a id="ctl00_ContentPlaceHolder1_articles2_RepLinks_ctl10_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-wrapper.html">Ai-assistant-wrapper</a>
+            	
+&nbsp;&nbsp;
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+						
+		<span id="ctl00_ContentPlaceHolder1_label1"></span>	
+
+                                                           														
+ 
+           <span id="ctl00_ContentPlaceHolder1_ad728_ad">
+</span>
+                                        <br /><br />
+    <!--
+				 <a id="ctl00_ContentPlaceHolder1_buttonmain" class="button"></a>
+                                                            <a id="ctl00_ContentPlaceHolder1_buttonall" class="button button-alt"></a>	
+    -->
+												
+
+
+
+
+
+										</article>
+									
+										</div>
+									</div>
+									
+
+							</div>
+
+						</div>
+
+					</div>
+
+			</div>
+
+			
+
+				<div class="main-wrapper-style3">
+					<div class="inner">
+						<div class=5grid-layout>
+							<div class="row">
+								<div class="8u">
+
+									<!-- Article list -->
+									<section class="box-article-list">
+										<h2 class="icon icon-news">Dataknobs Blog</h2>
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">10 Use Cases Built</span>
+													<h3><a href="https://www.dataknobs.com/use-cases/">10 Use Cases Built By Dataknobs</a></h3>
+												</header>
+												<p>
+													
+													Dataknobs has developed a wide range of products and solutions powered by Generative AI (GenAI), Agent AI, and traditional AI to address diverse industry needs. These solutions span finance, healthcare, real estate, e-commerce, and more. Click on to see in-depth look at these use cases -
+													Stocks Earning Call Analysis,  Ecommerce Analysis with GenAI,  Financial  Planner AI Assistant,  Kreatebots,  Kreate Websites,  Kreate CMS, Travel Agent Website,  Real Estate Agent etc.
+												</p>
+											</div>
+										</article>
+						
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">AI Agent for Business Analysis</span>
+													<h3><a href="https://www.dataknobs.com/products/kreate/kreate-structured-data-insights.html">Analyze reports, dashboard and determine To-do</a></h3>
+												</header>
+												<p>
+													
+													DataKnobs has built an AI Agent for structured data analysis that extracts meaningful insights from diverse datasets such as e-commerce metrics, sales/revenue reports, and sports 
+													scorecards. The agent ingests structured data from sources like CSV files, SQL databases, and APIs, automatically detecting schemas and relationships while standardizing formats.
+													Using statistical analysis, anomaly detection, 
+													and AI-driven forecasting, it identifies trends, correlations, and outliers, providing insights such as sales fluctuations, revenue leaks, and performance metrics.
+												</p>
+											</div>
+										</article>
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">AI Agent Tutorial</span>
+													<h3><a href="https://www.dataknobs.com/agent-ai/tutorials.html">Agent AI Tutorial</a></h3>
+												</header>
+												<p>
+													Here are slides and AI Agent Tutorial.  Agentic AI refers to AI systems that can autonomously perceive, reason, 
+													and take actions to achieve specific goals without constant human intervention. These AI agents use techniques
+													like reinforcement learning, planning, and memory to adapt and make decisions in dynamic environments. 
+													They are commonly used in automation, robotics, virtual assistants, and decision-making systems.
+												</p>
+											</div>
+										</article>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Build Dataproducts</span>
+													<h3><a href="https://www.dataknobs.com/data-products/">How Dataknobs help in building data products</a></h3>
+												</header>
+												<p>
+													
+													Building data products using Generative AI (GenAI) and Agentic AI enhances automation, intelligence, and adaptability in data-driven 
+													applications. GenAI can generate structured and unstructured data, automate content creation, enrich datasets, and synthesize 
+													insights from large volumes of information. This helps in scenarios such as automated report generation, anomaly detection, and
+													predictive modeling.
+												</p>
+											</div>
+										</article>
+
+
+										
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date"> KreateHub</span>
+													<h3><a href="https://www.dataknobs.com/products/kreate/prompt-library-for-genai.html">Create New knowledge with Prompt library</a></h3>
+												</header>
+												<p>
+													At its core, KreateHub is designed to enable creation of new data and the generation of insights from existing datasets. It acts as a bridge between raw data and meaningful outcomes,
+													providing the tools necessary for organizations to experiment, analyze, and optimize their data processes. 
+												</p>
+											</div>
+										</article>
+
+										<!-- Excerpt -->
+										<article class="box-excerpt">
+
+												<div>
+													<header>
+																	<span class="date">Build Budget Plan for GenAI</span>
+																	<h3><a href="https://www.dataknobs.com/generativeai/50-use-cases/how-to-create-genai-budget/">CIO Guide to create GenAI Budget for 2025</a></h3>
+													</header>
+													<p>
+																	CIOs and CTOs can apply GenAI in IT Systems. 
+																	The guide here describe scenarios and solutions for IT system, tech stack, GenAI cost and how to allocate budget.
+																	Once CIO and CTO can apply this to IT system, it can be extended for business use cases across company.
+													</p>
+												</div>
+										</article>
+
+
+
+
+											<article class="box-excerpt">
+
+												<div>
+													<header>
+														<span class="date">RAG For Unstructred and Structred Data</span>
+														<h3><a href="https://www.dataknobs.com/generativeai/10-llms/rag/rag-for-structured-and-unstructred-data.html">RAG Use Cases and Implementation</a></h3>
+													</header>
+													<p>Here are several value propositions for Retrieval-Augmented Generation (RAG) across different contexts: Unstructred Data, Structred Data, Guardrails.</p>
+												</div>
+											</article>
+
+										<article class="box-excerpt">
+
+											<div>
+												<header>
+													<span class="date">Why knobs matter</span>
+													<h3><a href="https://www.dataknobs.com/orthogonal.html">Knobs are levers using which you manage output</a></h3>
+												</header>
+												<p>See Drivetrain appproach for building data product, AI product. It has 4 steps and levers are key to success. Knobs are abstract mechanism on input that you can control.  </p>
+											</div>
+										</article>
+
+									</section>
+								</div>
+								<div class="4u">
+
+									<!-- Spotlight -->
+									<section class="box-spotlight pad-left">
+										<h2 class="icon icon-paper">Our Products</h2>
+										<article>
+
+											<header>
+												<h3><a href="https://www.dataknobs.com/products/kreatebots/">KreateBots</a></h3>
+												<span class="byline">Setup chatbots in minutes</span>
+											</header>
+											<li>Pre built front end that you can configure</li>
+											<li>Pre built Admin App to manage chatbot</li>
+											<li>       Prompt management UI</li>
+											<li>Personalization app </li>
+											<li>Built in chat history</li>
+											<li>Feedback Loop</li>
+											<li>Available on - GCP,Azure,AWS.</li>
+											<li>Add RAG with using few lines of Code. </li>
+											<li>Add FAQ generation to chatbot </li>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreatebots/" class="button" button-alt button-icon button-icon-paper>KreateBots</a>
+											</footer>
+										</article>
+										<article>
+
+											<header>
+												<h3><a href="https://www.dataknobs.com/products/kreatebots/">KreateWebsites</a></h3>
+												<span class="byline">LLM and AI based Website generation</span>
+											</header>
+											<li>AI powered websites to domainte search</li>
+											<li>Premium Hosting - Azure, GCP,AWS </li>
+											<li> AI  web designer</li>
+											<li> Agent to generate website</li>
+											<li> SEO powered by LLM</li>
+											<li>Content management system for GenAI</li>
+											<li>Buy as Saas Application or managed services</li>
+											<li>Available on Azure Marketplace too.</li>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreatewebsites/" class="button" button-alt button-icon button-icon-paper>KreateWebsites</a>
+											</footer>
+										</article>
+										<article>
+
+											<header>
+												<h3><a href="https://www.dataknobs.com/products/kreatebots/">Kreate CMS</a></h3>
+												<span class="byline">CMS GenAI</span>
+											</header>
+											<li>CMS for GenAI</li>
+											<li>Lineage for GenAI and Human created content</li>
+											<li>Track GenAI and Human Edited content</li>
+											<li>Trace pages that use content</li>
+											<li>Ability to delete GenAI content</li>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreate/cms/" class="button" button-alt button-icon button-icon-paper>CMS for Websites and Bots</a>
+											</footer>
+										</article>
+										<article>
+
+											<header>
+												<h3><a href="https://www.dataknobs.com/generativeai/generate-slides.html">Generate Slides</a></h3>
+												<span class="byline">Effortless slides creation</span>
+											</header>
+											<li>Give prompt to generate slides</li>
+											<li>Convert slides into webpages</li>
+											<li>Add SEO to slides webpages</li>
+											<footer>
+												<a href="https://www.dataknobs.com/generativeai/generative-ai-101-slides.html" class="button" button-alt button-icon button-icon-paper>Gen AI slides</a>
+											</footer>
+										</article>
+										<article>
+
+											<header>
+												<h3><a href="https://www.dataknobs.com/products/kreate/content/">Content Compass</a></h3>
+												<span class="byline">Your story writing is automated</span>
+											</header>
+											<li>Generate articles</li>
+											<li>Generate images</li>
+											<li>Generate related articles and images</li>
+											<li>Get suggestion what to write next</li>
+											<footer>
+												<a href="https://www.dataknobs.com/products/kreate/content/" class="button" button-alt button-icon button-icon-paper>Content Compass</a>
+											</footer>
+										</article>
+
+										<article>
+
+											<header>
+												<h3><a href=#>Fractional CTO for generative AI and Data Products</a></h3>
+												<span class="byline">Hire expertise without commitment<span>
+											</header>
+											<li>Deliver E2E use case</li>
+											<li>Generative AI expertise</li>
+											<li>Machine Learning expertise</li>
+											<li>Data product building expertise</li>
+											<li>Cloud - AWS, GCP,Azure</li>
+											<footer>
+												<a href="https://www.dataknobs.com/fractional-cto-ai/" class="button" button-icon button-icon-paper>Fractional CTO</a>
+											</footer>
+										</article>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+		
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+    
+						<div class="3u">
+						
+						
+								<section class="widget-links">
+									<h2>Main pages</h2>
+									<ul class="style2">
+										<a id="ctl00_hyperlink1"></a>
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl03_title" href="https://www.dataknobs.com/agent-ai/">Agent ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl04_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl05_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl06_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl07_title" href="https://www.dataknobs.com/customers/">Customers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl08_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl09_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl10_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl11_title" href="https://www.dataknobs.com/embeddings/">Embeddings</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl12_title" href="https://www.dataknobs.com/explore/">Explore</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl13_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl14_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl15_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl16_title" href="https://www.dataknobs.com/industry/">Industry</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl17_title" href="https://www.dataknobs.com/partnership/">Partnership</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl18_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl19_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl20_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl21_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl22_title" href="https://www.dataknobs.com/use-cases/">Use cases</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl23_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							
+								<section class="widget-links">
+									<h2>Related Pages </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl01_title" href="https://www.dataknobs.com/generativeai/10-llms/100K-tokens.html">100K-tokens</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl02_title" href="https://www.dataknobs.com/generativeai/10-llms/agenda.html">Agenda</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl03_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-architecture.html">Ai-assistant-architecture</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl04_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-building-blocks.html">Ai-assistant-building-blocks</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl05_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-custom-model.html">Ai-assistant-custom-model</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl06_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-evaluation-metric.html">Ai-assistant-evaluation-metric</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl07_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-finetune-model.html">Ai-assistant-finetune-model</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl08_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-on-your-data.html">Ai-assistant-on-your-data</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl09_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-tech-stack.html">Ai-assistant-tech-stack</a>
+            </li>	
+    <br />
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articles1_RepLinks_ctl10_title" href="https://www.dataknobs.com/generativeai/10-llms/ai-assistant-wrapper.html">Ai-assistant-wrapper</a>
+            </li>	
+    <br />
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+										
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+					
+								<section class="widget-links">
+									<h2>Explore more </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl01_title" href="https://www.dataknobs.com/"><em><b>Home</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl02_title" href="https://www.dataknobs.com/generativeai/10-llms/adoption-in-enterprises/"><em><b>Adoption in enterprises</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl03_title" href="https://www.dataknobs.com/generativeai/10-llms/agents/"><em><b>Agents</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl04_title" href="https://www.dataknobs.com/generativeai/10-llms/course/"><em><b>Course</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl05_title" href="https://www.dataknobs.com/generativeai/10-llms/create-ai-assistants/"><em><b>Create ai assistants</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl06_title" href="https://www.dataknobs.com/generativeai/10-llms/customer-onboarding-assistant/"><em><b>Customer onboarding assistant</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl07_title" href="https://www.dataknobs.com/generativeai/10-llms/grounding/"><em><b>Grounding</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl08_title" href="https://www.dataknobs.com/generativeai/10-llms/guardrails/"><em><b>Guardrails</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl09_title" href="https://www.dataknobs.com/generativeai/10-llms/hallucinations/"><em><b>Hallucinations</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl10_title" href="https://www.dataknobs.com/generativeai/10-llms/limitations/"><em><b>Limitations</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl11_title" href="https://www.dataknobs.com/generativeai/10-llms/multi-modal-llm/"><em><b>Multi modal llm</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl12_title" href="https://www.dataknobs.com/generativeai/10-llms/openai-fine-tuning/"><em><b>Openai fine tuning</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl13_title" href="https://www.dataknobs.com/generativeai/10-llms/privacy-preserving/"><em><b>Privacy preserving</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl14_title" href="https://www.dataknobs.com/generativeai/10-llms/prompt-injection/"><em><b>Prompt injection</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl15_title" href="https://www.dataknobs.com/generativeai/10-llms/rag/"><em><b>Rag</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl16_title" href="https://www.dataknobs.com/generativeai/10-llms/recent-updates/"><em><b>Recent updates</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl17_title" href="https://www.dataknobs.com/generativeai/10-llms/training/"><em><b>Training</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl18_title" href="https://www.dataknobs.com/generativeai/10-llms/types-of-chatbots/"><em><b>Types of chatbots</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+						
+								<section class="widget-contact last">
+									<h2>Contact Us</h2>
+									<ul>
+										
+										<li><a href="https://www.facebook.com/kreatewebsites/" class="facebook">Facebook</a></li>
+										<li><a href="https://www.linkedin.com/company/kreatewebsites/" class="googleplus">Linkedin</a></li>
+									</ul>
+									<p>
+									Redmond, WA <br />
+									USA  </p>
+								</section>
+						
+						</div>
+                        
+					</div>
+					<div class="row">
+						<div class="12u">
+							 <div id="copyright">
+							&copy;  Design: <a id="ctl00_cright">Dataknobs</a> | <a id="ctl00_sitemap"></a>  | <a id="ctl00_privacypolicy" href="https://www.dataknobs.com/privacypolicy.html">Privacy Policy</a> | <a id="ctl00_footerfooter" href="https://www.dataknobs.com/">Dataknobs</a></asp:HyperLink> 
+			</div>
+								 <p></p>
+						</div>
+						</div>
+					
+				</footer>
+			</div>
+
+	</body>
+</html>

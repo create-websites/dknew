@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Dataknobs Blog</title>
+<link>https://www.dataknobs.com</link>
+<description>Build Data Products Right From Start</description>
+<language>en-us</language>
+
+<item>
+<title>AI Assistant vs Digital Human</title>
+<link>https://www.dataknobs.com/generativeai/80-digital-human/</link>
+<description>AI assistants and digital humans both offer virtual assistance, but they differ in their core functionalities and capabilities. Digital human has human like appearance, AI assistant do not have appearance. Digital human are expected to have better in social interaction and emotional intelligence</description>
+<pubDate>Sun, 01 Sep 2024 18:21:57 GMT</pubDate>
+</item>
+
+<item>
+<title>Security Framework for GenAI</title>
+<link>https://www.dataknobs.com/generativeai/25-security-framework/</link>
+<description>Security frameowrk for genAI has 3 important components 1. Identify ttack surface area 2. Secure attack surface  3. Create a security Plan. Read details of these 3 components</description>
+<pubDate>Sat, 02 Sep 2024 15:12:34 GMT</pubDate>
+</item>
+
+</channel>
+</rss>

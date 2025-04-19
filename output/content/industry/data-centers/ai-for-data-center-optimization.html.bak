@@ -1,0 +1,963 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	
+	<head id="ctl00_head1">
+<meta name="google-site-verification" content="RVceKokUCmE6I_4EjvyNso7r-FabKr95sjVmUSOiUAI" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF94J1W5MC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JF94J1W5MC');
+
+</script><title>
+	ai-for-data-center-optimization
+</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" /><meta name="keywords" /><link rel="icon" href="https://storage.googleapis.com/json_articles/dataknobs-logo-2.jpg" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery-1.8.3.min.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/jquery.dropotron-1.2.js"></script>
+		<script src="https://css.dataknobs.com/sites/site-6/site6-1/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style.css" /><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="https://css.dataknobs.com/sites/site-6/site6-1/css/ie7.css" /><![endif]-->
+
+
+
+
+	</head>
+  
+	<body class="no-sidebar">
+         
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="5grid-layout">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<header id="header">
+								
+									<!-- Logo -->
+										
+										<div class="inner">
+										
+											<h1> <a id="ctl00_topheader" class="mobileUI-site-name">ai-for-data-center-optimization</a></h1>
+										
+									        
+										</div>
+									
+									
+									<!-- Nav -->
+										<nav id="nav" class="mobileUI-site-nav">
+											<ul>
+												 <li><a id="ctl00_hyperlinkHome" href="https://www.dataknobs.com/">Home</a></li>
+												<!--
+														
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.dataknobs.com/customers/">Customers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl07_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl08_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl09_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl10_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl11_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl12_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl13_title" href="https://www.dataknobs.com/guide/">Guide</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl14_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl15_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl16_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl17_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_articleshome_RepLinks_ctl18_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+												-->
+                                               
+											</ul>
+										</nav>
+								
+								</header>
+                               
+
+						</div>
+					</div>
+				</div>
+			
+		</div>
+
+		<div id="main-wrapper">
+
+				<div class="main-wrapper-style2">
+
+					<div class="inner">
+
+						<div class="5grid-layout">
+
+							<div class="row">
+
+									
+									<div class="12u mobileUI-main-content">
+										<div id="content">
+
+										<article>
+
+												
+													
+
+
+		
+							
+										
+
+
+                                         
+					  <h2><span id="ctl00_ContentPlaceHolder1_title">ai-for-data-center-optimization</span></h2>						
+										
+						 <span class="byline"> <span id="ctl00_ContentPlaceHolder1_metadesc"></span></span>				
+                        <br />       
+     
+
+							<table id="ctl00_ContentPlaceHolder1_RepDetails" cellspacing="0" border="0">
+	<tr>
+		<td colspan="3">
+
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide1.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_Image1" alt="SLIDE1200/SLIDE1" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide1.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide1.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide1.png">SLIDE1200/SLIDE1</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide2.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_Image1" alt="SLIDE1200/SLIDE2" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide2.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide2.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide2.png">SLIDE1200/SLIDE2</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide3.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_Image1" alt="SLIDE1200/SLIDE3" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide3.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide3.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide3.png">SLIDE1200/SLIDE3</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide4.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_Image1" alt="SLIDE1200/SLIDE4" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide4.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide4.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide4.png">SLIDE1200/SLIDE4</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide5.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_Image1" alt="SLIDE1200/SLIDE5" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide5.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide5.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide5.png">SLIDE1200/SLIDE5</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide6.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_Image1" alt="SLIDE1200/SLIDE6" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide6.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide6.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide6.png">SLIDE1200/SLIDE6</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide7.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_Image1" alt="SLIDE1200/SLIDE7" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide7.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide7.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide7.png">SLIDE1200/SLIDE7</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide8.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_Image1" alt="SLIDE1200/SLIDE8" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide8.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide8.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide8.png">SLIDE1200/SLIDE8</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide9.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_Image1" alt="SLIDE1200/SLIDE9" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide9.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide9.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide9.png">SLIDE1200/SLIDE9</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide10.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_Image1" alt="SLIDE1200/SLIDE10" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide10.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide10.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide10.png">SLIDE1200/SLIDE10</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide11.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_Image1" alt="SLIDE1200/SLIDE11" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide11.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide11.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide11.png">SLIDE1200/SLIDE11</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide12.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_Image1" alt="SLIDE1200/SLIDE12" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide12.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide12.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide12.png">SLIDE1200/SLIDE12</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide13.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_Image1" alt="SLIDE1200/SLIDE13" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide13.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide13.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide13.png">SLIDE1200/SLIDE13</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide14.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_Image1" alt="SLIDE1200/SLIDE14" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide14.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide14.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide14.png">SLIDE1200/SLIDE14</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide15.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_Image1" alt="SLIDE1200/SLIDE15" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide15.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide15.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide15.png">SLIDE1200/SLIDE15</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide16.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_Image1" alt="SLIDE1200/SLIDE16" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide16.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide16.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide16.png">SLIDE1200/SLIDE16</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide17.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_Image1" alt="SLIDE1200/SLIDE17" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide17.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide17.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide17.png">SLIDE1200/SLIDE17</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide18.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_Image1" alt="SLIDE1200/SLIDE18" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide18.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide18.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide18.png">SLIDE1200/SLIDE18</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide19.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_Image1" alt="SLIDE1200/SLIDE19" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide19.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide19.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide19.png">SLIDE1200/SLIDE19</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide20.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_Image1" alt="SLIDE1200/SLIDE20" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide20.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide20.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide20.png">SLIDE1200/SLIDE20</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td><td>
+
+
+ <span class="image image-full">        					
+                   
+<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_imghyperlink" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide21.png"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_Image1" alt="SLIDE1200/SLIDE21" NavigateUrl="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide21.png" src="https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide21.png" border="0" /></a>
+     </span>
+                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_hyperlink1" href="https://css.dataknobs.com/image.html?imageurl=https://storage.googleapis.com/13ktdq6rg75tb5mz8qly_gdrive/designs.kreatewebsites.com/input/content/uploads/ai-for-data-center-optimization/images/Slide1200/Slide21.png">SLIDE1200/SLIDE21</a></blockquote>
+												 
+				
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
+		
+
+  </div>
+
+</td>
+	</tr><tr>
+		<td colspan="3">
+
+
+
+</td>
+	</tr>
+</table>
+										
+									<span id="ctl00_ContentPlaceHolder1_labeltext"></span>	
+
+                                                           														
+                            <br />
+                            <br />
+
+                                   
+                            <br />
+                            <br />
+                             <div class="fb-activity" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+	
+								
+                                <div class="fb-comments" data-href="https://www.dataknobs.com/" data-numposts="5" data-colorscheme="light" data-order-by="reverse_time"></div>
+			
+<!--
+                            <div class="fb-post" data-href="https://www.facebook.com/DiwaliCelebrations" data-width="500"></div>		
+                              <div class="fb-recommendations" data-site="https://www.dataknobs.com/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+		
+                            -->
+     
+             
+ 
+ 
+ 
+	
+						
+		<span id="ctl00_ContentPlaceHolder1_label1"></span>	
+
+                                                           														
+ 
+           <span id="ctl00_ContentPlaceHolder1_ad728_ad">
+</span>
+                                        <br /><br />
+
+    <!--
+				 <a id="ctl00_ContentPlaceHolder1_buttonmain" class="button"></a>
+                                                            <a id="ctl00_ContentPlaceHolder1_buttonall" class="button button-alt"></a>	
+    -->
+												
+
+
+
+
+
+										</article>
+									
+										</div>
+									</div>
+							
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+					</div>
+
+		</div>
+
+
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+		
+				<footer id="footer" class="5grid-layout">
+					<div class="row">
+    
+						<div class="3u">
+						
+						
+								<section class="widget-links">
+									<h2>Main pages</h2>
+									<ul class="style2">
+										<a id="ctl00_hyperlink1"></a>
+										
+
+    
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl01_title" href="https://www.dataknobs.com/">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl02_title" href="https://www.dataknobs.com/about-dataknobs/">About dataknobs</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl03_title" href="https://www.dataknobs.com/blog/">Blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl04_title" href="https://www.dataknobs.com/careers/">Careers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl05_title" href="https://www.dataknobs.com/causal-inference/">Causal inference</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl06_title" href="https://www.dataknobs.com/customers/">Customers</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl07_title" href="https://www.dataknobs.com/data-centric-ai/">Data centric ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl08_title" href="https://www.dataknobs.com/data-products/">Data products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl09_title" href="https://www.dataknobs.com/datasets-blindspots/">Datasets blindspots</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl10_title" href="https://www.dataknobs.com/fractional-cto-ai/">Fractional cto ai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl11_title" href="https://www.dataknobs.com/generate-datasets/">Generate datasets</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl12_title" href="https://www.dataknobs.com/generativeai/">Generativeai</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl13_title" href="https://www.dataknobs.com/guide/">Guide</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl14_title" href="https://www.dataknobs.com/privacy/">Privacy</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl15_title" href="https://www.dataknobs.com/products/">Products</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl16_title" href="https://www.dataknobs.com/slides/">Slides</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl17_title" href="https://www.dataknobs.com/solutions/">Solutions</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a id="ctl00_Articleshome3_RepLinks_ctl18_title" href="https://www.dataknobs.com/vector-database/">Vector database</a>
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							
+								<section class="widget-links">
+									<h2>Related Pages </h2>
+									<ul class="style2">
+										
+             
+ 
+ 
+ 
+
+										
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+					
+								<section class="widget-links">
+									<h2>Explore more </h2>
+									<ul class="style2">
+										
+
+    
+
+
+
+												
+		<li>					
+			<a id="ctl00_Articlesub1_RepLinks_ctl01_title" href="https://www.dataknobs.com/"><em><b>Home</b></em></a>
+            
+           
+            </li>	
+
+
+
+
+
+
+
+             
+ 
+ 
+ 
+	
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+						
+								<section class="widget-contact last">
+									<h2>Contact Us</h2>
+									<ul>
+										<li><a href="#" class="twitter">Twitter</a></li>
+										<li><a href="#" class="facebook">Facebook</a></li>
+										<li><a href="#" class="googleplus">Linkedin</a></li>
+									</ul>
+									<p>
+									Redmond, WA <br />
+									USA  </p>
+								</section>
+						
+						</div>
+                        
+					</div>
+					<div class="row">
+						<div class="12u">
+							 <div id="copyright">
+							&copy;  Design: <a id="ctl00_cright">Home</a> | <a id="ctl00_sitemap"></a>  | <a id="ctl00_privacypolicy" href="https://www.dataknobs.com/privacypolicy.html">Privacy Policy</a> | <a id="ctl00_footerfooter" href="https://www.dataknobs.com/">Home</a></asp:HyperLink> 
+			</div>
+								 <p></p>
+						</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+	</body>
+</html>
